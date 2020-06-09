@@ -1,0 +1,23 @@
+.about {
+    background-image: url("../../assets/images/background/green.png");
+    position: absolute;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    z-index: 3;
+    filter: brightness(50%);
+}
+
+.about-text {
+    z-index: 3;
+    position: absolute;
+    height: 200px;
+    width: 90%;
+    padding-left: 5%;
+    padding-top: 200px;
+    #about-description {
+        font-size: 30px;
+        color: var(--main-color-1);
+        font-family: "FuturaLight";
+    }
+}

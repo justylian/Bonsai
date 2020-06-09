@@ -1,0 +1,123 @@
+.main {
+    color: var(--main-color-1);
+    height: 1000px;
+    #main-backgound-image {
+        #main-backgound-image-1 {
+            background-image: url("../../assets/images/background/bonsai.png");
+            position: absolute;
+            background-size: cover;
+            height: 1000px;
+            left: 20%;
+            width: 1000px;
+            z-index: 2;
+            //height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #main-backgound-image-2 {
+            background-image: url("../../assets/images/background/japanese.png");
+            position: absolute;
+            background-size: cover;
+            height: 1000px;
+            left: 0%;
+            width: 1000px;
+            z-index: 2;
+        }
+        #main-backgound-image-2 {
+            background-image: url("../../assets/images/background/japanese.png");
+            position: absolute;
+            background-size: cover;
+            height: 1000px;
+            left: 50%;
+            width: 1000px;
+            z-index: 2;
+        }
+    }
+    #main-header {
+        h1 {
+            font-size: 15vw;
+            font-family: "Futura";
+            position: absolute;
+            height: 25px;
+            top: 30px;
+            left: 22%;
+            z-index: 1;
+        }
+        //background-image: url("../../assets/images/background/header.png");
+        //background-size: cover;
+    }
+    #main-logo {
+        background-image: url("../../assets/images/background/logo.png");
+        position: absolute;
+        background-size: cover;
+        height: 110px;
+        left: 30px;
+        top: 10px;
+        width: 40px;
+        z-index: 4;
+        position: fixed;
+        filter: drop-shadow(80px 10px 100px var(--main-color-1));
+    }
+    #main-menu ul {
+        //bottom: 0%;
+        font-size: 25px;
+        left: 30%;
+        position: absolute;
+        //height: 100%;
+        text-shadow: 2px 1px 50px #ffffff;
+        transition: 0.5s ease;
+        z-index: 4;
+        filter: drop-shadow(80px 10px 100px var(--main-color-1));
+        //background: rgba(255, 255, 255, 0.589);
+        // border-radius: 30%;
+    }
+    #main-menu li {
+        font-size: 25px;
+        list-style-type: none;
+        color: var(--main-color-2);
+        position: relative;
+        padding-right: 81px;
+        text-align: right;
+        float: left;
+        z-index: 3;
+        display: block;
+        // transition: 0.5s ease;
+        #main-menu-line-1 {
+            //opacity: 0;
+            display: none;
+            background: var(--main-color-1);
+            height: 4px;
+            z-index: 3;
+            margin-left: -50px;
+            margin-top: -16px;
+        }
+        #main-menu-line-2 {
+            display: none;
+            background: var(--main-color-1);
+            height: 4px;
+            z-index: 3;
+            margin-left: -50px;
+            margin-top: -16px;
+        }
+        #main-menu-line-3 {
+            //opacity: 0;
+            display: none;
+            background: var(--main-color-1);
+            height: 4px;
+            z-index: 3;
+            margin-left: -50px;
+            margin-top: -16px;
+        }
+        #main-menu-line-4 {
+            //opacity: 0;
+            display: none;
+            background: var(--main-color-1);
+            height: 4px;
+            z-index: 3;
+            margin-left: -50px;
+            margin-top: -16px;
+        }
+    }
+}

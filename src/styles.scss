@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "FuturaLight";
+    src: url("/assets/font/Futura/futuralight.ttf");
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("/assets/font/Futura/futuramedium.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "FuturaBold";
+    src: url("/assets/font/Futura/futurabold.ttf");
+    font-weight: bold;
+}
+
+html,
+body {
+    font-family: Futura;
+    overflow-x: hidden;
+    position: relative;
+    height: 5080px;
+    width: 1920px;
+    margin: 0;
+    padding: 0;
+    top: 0%;
+    margin: 0%;
+    background: white;
+    //background: linear-gradient(0deg, #e1e9e9, #eeeef1);
+    --main-color-1: #D1EAEC;
+    --main-color-2: #1D352A;
+    --main-color-3: #DCD6E6;
+}
+
+h2 {
+    font-size: 70px;
+    color: var(--main-color-1);
+}
