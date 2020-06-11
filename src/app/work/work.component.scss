@@ -16,6 +16,14 @@
         color: var(--main-color-2);
         padding-left: 5%;
     }
+    .img-grid {
+        //transform: scale(3);
+        height: 90vh;
+        // margin-left: 35vw;
+        position: absolute;
+        z-index: 4;
+        filter: drop-shadow(80px 10px 100px black);
+    }
     ul {
         list-style-type: none;
         display: flex;
