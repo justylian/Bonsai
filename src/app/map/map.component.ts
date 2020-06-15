@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-declare var require: any;
-declare var $: any;
+import Map from 'ol/Map';
+import View from 'ol/View';
+import VectorLayer from 'ol/layer/Vector';
+import Style from 'ol/style/Style';
+import Icon from 'ol/style/Icon';
+import OSM from 'ol/source/OSM';
+import * as olProj from 'ol/proj';
+import TileLayer from 'ol/layer/Tile';
 
 @Component({
   selector: 'app-map',
@@ -9,20 +15,25 @@ declare var $: any;
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  public constructor() {
 
-  ngOnInit() {
-   /* var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
-    mapboxgl.accessToken =
-      "pk.eyJ1IjoieGVuYWtpcyIsImEiOiJjanczdDBpMHAwZWgzM3lrbW9xaDVpNnlzIn0.9O8d2q7A_DUaGbswoygSTA";
-
-
-      var mymap = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/xenakis/ckbb39k3m09k21iqqjq5uxd00",
-        center: [35.375452, 24.201023],
-        //pitch: 60,
-        zoom: 15
-      });*/
   }
+
+  public ngOnInit() {
+    let map = new Map({
+      target: 'map',
+      layers: [
+        new TileLayer({
+          source: new OSM()
+        })
+      ],
+      view: new View({
+        center: olProj.fromLonLat([24.3, 35.40]),
+        zoom: 10
+      })
+    });
+
+  }
+
+
  }
