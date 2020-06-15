@@ -6,6 +6,7 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { MapComponent } from './map/map.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MapComponent } from './map/map.component';
     MainComponent,
     AboutComponent,
     WorkComponent,
-    MapComponent
+    MapComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
