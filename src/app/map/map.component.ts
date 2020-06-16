@@ -29,7 +29,7 @@ export class MapComponent implements OnInit {
       ],
       view: new View({
         center: olProj.fromLonLat([24.3, 35.40]),
-        zoom: 10
+        zoom: 11
       })
     });
 
