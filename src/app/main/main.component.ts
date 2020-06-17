@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
+import SweetScroll from 'sweet-scroll';
 
 declare var require: any;
 declare var $: any;
@@ -17,7 +18,9 @@ export class MainComponent implements OnInit {
    }
 
   ngOnInit() {
-
+    document.addEventListener('DOMContentLoaded', () => {
+      const sweetScroll = new SweetScroll({ /* some options */ });
+    }, false);
   }
   public crossout(i){
     $("#main-menu-line-"+i).hide();
@@ -37,4 +40,5 @@ export class MainComponent implements OnInit {
         fontSize: "27",
       }, 100);
   }
+
 }

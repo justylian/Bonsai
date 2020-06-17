@@ -1,24 +1,37 @@
 <div class="main">
+
+
     <div id="main-logo">
     </div>
     <div id="main-menu">
         <ul>
-            <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" id="main-menu-li-1">
-                The Flower Shop
-                <div class="main-menu-line" id="main-menu-line-1"></div>
-            </li>
-            <li (mouseenter)="cross('2')" (mouseleave)="crossout('2')" id="main-menu-li-2">
-                Work
-                <div class="main-menu-line" id="main-menu-line-2"></div>
-            </li>
-            <li (mouseenter)="cross('3')" (mouseleave)="crossout('3')" id="main-menu-li-3">
-                Location
-                <div class="main-menu-line" id="main-menu-line-3"></div>
-            </li>
-            <li (mouseenter)="cross('4')" (mouseleave)="crossout('4')" id="main-menu-li-4">
-                Contact
-                <div class="main-menu-line" id="main-menu-line-4"></div>
-            </li>
+            <a href="#about" data-scroll>
+                <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" id="main-menu-li-1">
+                    The Flower Shop
+                    <div class="main-menu-line" id="main-menu-line-1"></div>
+                </li>
+            </a>
+            <a href="#work" data-scroll>
+
+                <li (mouseenter)="cross('2')" (mouseleave)="crossout('2')" id="main-menu-li-2">
+                    Work
+                    <div class="main-menu-line" id="main-menu-line-2"></div>
+                </li>
+            </a>
+            <a href="#map" data-scroll>
+
+                <li (mouseenter)="cross('3')" (mouseleave)="crossout('3')" id="main-menu-li-3">
+                    Location
+                    <div class="main-menu-line" id="main-menu-line-3"></div>
+                </li>
+            </a>
+            <a href="#contact" data-scroll>
+
+                <li (mouseenter)="cross('4')" (mouseleave)="crossout('4')" id="main-menu-li-4">
+                    Contact
+                    <div class="main-menu-line" id="main-menu-line-4"></div>
+                </li>
+            </a>
         </ul>
 
     </div>
