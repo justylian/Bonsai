@@ -19,8 +19,12 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     document.addEventListener('DOMContentLoaded', () => {
-      const sweetScroll = new SweetScroll({ /* some options */ });
+      const sweetScroll = new SweetScroll({
+        duration: 2000,                 // Specifies animation duration in integer
+        easing: 'easeInQuad'
+       });
     }, false);
+
   }
   public crossout(i){
     $("#main-menu-line-"+i).hide();
@@ -41,4 +45,9 @@ export class MainComponent implements OnInit {
       }, 100);
   }
 
+  public scrollUp(){
+    const scroller = new SweetScroll();
+
+    scroller.to('#main-menu');
+  }
 }

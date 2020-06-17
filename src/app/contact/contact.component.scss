@@ -7,4 +7,22 @@ h2 {
     background-color: var(--main-color-1);
     width: 100%;
     height: 500px;
+    #telephone {
+        background-image: url("../../assets/images/background/phone.png");
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+    }
+    #email {
+        background-image: url("../../assets/images/background/mail.png");
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+    }
+    #facebook {
+        background-image: url("../../assets/images/background/facebook.png");
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+    }
 }
