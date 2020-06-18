@@ -135,4 +135,5 @@
     -webkit-transform: rotate(-135deg);
     -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
     filter: drop-shadow(0px 0px 30px);
+    transition: all .2s ease-in-out;
 }

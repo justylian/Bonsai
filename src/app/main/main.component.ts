@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,HostListener} from '@angular/core';
 import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 import SweetScroll from 'sweet-scroll';
 
@@ -12,6 +12,28 @@ declare var jQuery: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  isShow: boolean;
+  topPosToStartShowing = 100;
+
+  @HostListener('window:scroll')
+  checkScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    console.log('[scroll]', scrollPosition);
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+    gotoTop() {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
 
   constructor() {
 
@@ -24,6 +46,8 @@ export class MainComponent implements OnInit {
         easing: 'easeInQuad'
        });
     }, false);
+
+
 
   }
   public crossout(i){
@@ -45,9 +69,12 @@ export class MainComponent implements OnInit {
       }, 100);
   }
 
-  public scrollUp(){
-    const scroller = new SweetScroll();
 
-    scroller.to('#main-menu');
-  }
+
+
+
+
+
+
+
 }
