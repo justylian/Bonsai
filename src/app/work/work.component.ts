@@ -39,4 +39,35 @@ export class WorkComponent implements OnInit {
     }, 100);
 */
   }
+
+  filter(x){
+    //console.log(x)
+
+    if(x==="Baptism"){
+      for(var i=1;i<=6;i++){
+        var alt=$("#img-"+i).attr("alt").toUpperCase();
+        console.log(alt)
+        if(!alt.includes(x.toUpperCase())){
+          $("#img-"+i).hide();
+          console.log(i)
+        }
+      }
+    }
+    else if(x==="Wedding"){
+      for(var i=1;i<=6;i++){
+        var alt=$("#img-"+i).attr("alt").toUpperCase();
+        console.log(alt)
+        if(!alt.includes(x.toUpperCase())){
+          $("#img-"+i).hide();
+          console.log(i)
+        }
+      }
+    }
+    else{
+      for(var i=1;i<=6;i++){
+          $("#img-"+i).show();
+        }
+      }
+
+  }
 }

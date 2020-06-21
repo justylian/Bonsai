@@ -55,18 +55,14 @@ export class MainComponent implements OnInit {
     $("#main-menu-line-"+i).animate({
       marginLeft: "-=50",
     }, 100);
-    $("#main-menu-li-"+i).animate({
-      fontSize: "25",
-    }, 100);
+
   }
   public cross(i){
     $("#main-menu-line-"+i).show();
       $("#main-menu-line-"+i).animate({
         marginLeft: "+=50",
       }, 100);
-      $("#main-menu-li-"+i).animate({
-        fontSize: "27",
-      }, 100);
+
   }
 
 

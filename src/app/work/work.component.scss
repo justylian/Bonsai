@@ -1,3 +1,19 @@
+select:active,
+select:focus,
+select:hover {
+    outline: none;
+}
+
+select {
+    width: 100%;
+    outline: none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+}
+
 #work {
     height: 1300px;
     overflow-y: hidden;
@@ -6,29 +22,44 @@
     #work-filter {
         margin-top: -90px;
         float: right;
-        margin-right: 2%;
+        margin-right: 10%;
         display: inline;
     }
-    #work-filter-button {
+    #work-filter-list {
+        display: block;
         display: inline;
         border: 1px solid var(--main-color-2);
         padding: 10px;
         border-radius: 20px;
         font-family: "FuturaLight";
-        #work-filter-list {
+        font-size: 20px;
+        position: absolute;
+        select-arrow {
             display: none;
         }
-        #button-arrow {
-            border: solid var(--main-color-2);
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            //margin-left: 48%;
-            padding: 6px;
-            margin-left: 6px;
-            margin-right: 7px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
+        #work-list-1 {
+            height: 100%;
+            display: block;
         }
+        #work-list-2 {
+            height: 100%;
+            // display: none;
+        }
+        #work-list-3 {
+            height: 100%;
+            // display: none;
+        }
+    }
+    #button-arrow {
+        border: solid var(--main-color-2);
+        border-width: 0 10px 10px 0;
+        display: inline-block;
+        //margin-left: 48%;
+        padding: 16px;
+        margin-left: 6px;
+        margin-right: 7px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
     }
     #work-arrow {
         border: solid var(--main-color-2);
