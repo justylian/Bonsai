@@ -3,6 +3,33 @@
     overflow-y: hidden;
     width: 100%;
     margin-top: 900px;
+    #work-filter {
+        margin-top: -90px;
+        float: right;
+        margin-right: 2%;
+        display: inline;
+    }
+    #work-filter-button {
+        display: inline;
+        border: 1px solid var(--main-color-2);
+        padding: 10px;
+        border-radius: 20px;
+        font-family: "FuturaLight";
+        #work-filter-list {
+            display: none;
+        }
+        #button-arrow {
+            border: solid var(--main-color-2);
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            //margin-left: 48%;
+            padding: 6px;
+            margin-left: 6px;
+            margin-right: 7px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    }
     #work-arrow {
         border: solid var(--main-color-2);
         border-width: 0 18px 18px 0;
