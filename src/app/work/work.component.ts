@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import imagesjson from "../../assets/json/images.json";
+
 declare var require: any;
 declare var $: any;
 declare var jQuery: any;
@@ -9,12 +11,14 @@ declare var jQuery: any;
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
+  imagesjson=imagesjson;
   imgCount;
   constructor() { }
 
   ngOnInit() {
     this.imgCount=135;
   }
+
   zoom(x){
     //$("#img-"+x).an
     $("#img-"+x).attr("class","img-grid");
@@ -30,16 +34,6 @@ export class WorkComponent implements OnInit {
   }
   unzoom(x){
     $("#img-"+x).removeClass("img-grid");
-
- /*   //$("#img-"+x).an
-    $("#img-"+x).animate({
-      transform: "scale(1)",
-      height:"100%",
-      marginLeft: "",
-      position:"relative",
-      zIndex:"4"
-    }, 100);
-*/
   }
 
   filter(x){
