@@ -5,7 +5,7 @@ select:hover {
 }
 
 select {
-    width: 100%;
+    // width: 100%;
     outline: none;
     -moz-appearance: none;
     /* Firefox */
@@ -24,30 +24,30 @@ select {
         float: right;
         margin-right: 10%;
         display: inline;
-    }
-    #work-filter-list {
-        display: block;
-        display: inline;
-        border: 1px solid var(--main-color-2);
-        padding: 10px;
-        border-radius: 20px;
-        font-family: "FuturaLight";
-        font-size: 20px;
-        position: absolute;
-        select-arrow {
-            display: none;
-        }
-        #work-list-1 {
-            height: 100%;
+        #work-filter-list {
             display: block;
-        }
-        #work-list-2 {
-            height: 100%;
-            // display: none;
-        }
-        #work-list-3 {
-            height: 100%;
-            // display: none;
+            display: inline;
+            border: 1px solid var(--main-color-2);
+            padding: 10px;
+            border-radius: 20px;
+            font-family: "FuturaLight";
+            font-size: 20px;
+            position: absolute;
+            select-arrow {
+                display: none;
+            }
+            #work-list-1 {
+                height: 100%;
+                display: block;
+            }
+            #work-list-2 {
+                height: 100%;
+                // display: none;
+            }
+            #work-list-3 {
+                height: 100%;
+                // display: none;
+            }
         }
     }
     #button-arrow {
@@ -61,14 +61,31 @@ select {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
     }
-    #work-arrow {
-        border: solid var(--main-color-2);
+    #work-arrow-right {
+        border: solid #ffffff;
         border-width: 0 18px 18px 0;
         display: inline-block;
-        margin-left: 48%;
+        margin-top: 400px;
+        margin-left: 94%;
+        position: absolute;
         padding: 25px;
         transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
+        -webkit-transform: rotate(-45deg);
+        -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
+        filter: drop-shadow(0px 0px 30px);
+    }
+    #work-arrow-left {
+        border: solid #ffffff;
+        border-width: 0 18px 18px 0;
+        display: inline-block;
+        margin-top: 400px;
+        margin-left: 4%;
+        position: absolute;
+        padding: 25px;
+        transform: rotate(-222deg);
+        -webkit-transform: rotate(-222deg);
+        -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
+        filter: drop-shadow(0px 0px 30px);
     }
     h2 {
         color: var(--main-color-2);

@@ -4,34 +4,35 @@
 
         <select id="work-filter-list" #t (change)="filter(t.value)">
           <div id="button-arrow"></div>
-
-                <option id="work-list-1" (click)="filter('All')" value="All" class="active">All Ceremonies</option>
-                <option id="work-list-2" (change)="filter('Wedding')" value="Wedding">Wedding</option>
+                <option id="work-list-1"  value="All" >All Ceremonies</option>
+                <option id="work-list-2"  value="Wedding">Wedding</option>
                 <option id="work-list-3"  value="Baptism">Baptism</option>
             </select>
 
-
     </div>
+
     <ul>
         <li id="img-1" alt="wedding baptism" (mouseup)="zoom('1')" (mousedown)="unzoom('1')">
-            <img src="../../assets/images/gallery/1.jpg" loading="lazy">
+            <img id="img-src-1" src="../../assets/images/gallery/1.jpg" loading="lazy">
         </li>
         <li id="img-2" alt="wedding" (mouseup)="zoom('2')" (mousedown)="unzoom('2')">
-            <img src="../../assets/images/gallery/2.jpg" loading="lazy">
+            <img id="img-src-2" src="../../assets/images/gallery/2.jpg" loading="lazy">
         </li>
         <li id="img-3" alt="wedding" (mouseup)="zoom('3')" (mousedown)="unzoom('3')">
-            <img src="../../assets/images/gallery/3.jpg" loading="lazy">
+            <img id="img-src-3" src="../../assets/images/gallery/3.jpg" loading="lazy">
         </li>
+        <div id="work-arrow-right" (click)="changeImages()"></div>
+        <div id="work-arrow-left"></div>
+
         <li id="img-4" alt="wedding" (mouseup)="zoom('4')" (mousedown)="unzoom('4')">
-            <img src="../../assets/images/gallery/4.jpg" loading="lazy">
+            <img id="img-src-4" src="../../assets/images/gallery/4.jpg" loading="lazy">
         </li>
         <li id="img-5" alt="wedding" (mouseup)="zoom('5')" (mousedown)="unzoom('5')">
-            <img src="../../assets/images/gallery/5.jpg" loading="lazy">
+            <img id="img-src-5" src="../../assets/images/gallery/5.jpg" loading="lazy">
         </li>
         <li id="img-6" alt="wedding" (mouseup)="zoom('6')" (mousedown)="unzoom('6')">
-            <img src="../../assets/images/gallery/6.jpg" loading="lazy">
+            <img id="img-src-6" src="../../assets/images/gallery/6.jpg" loading="lazy">
         </li>
 
     </ul>
-    <div id="work-arrow"></div>
 </div>

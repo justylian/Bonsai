@@ -2,16 +2,18 @@ import { Component, OnInit } from '@angular/core';
 declare var require: any;
 declare var $: any;
 declare var jQuery: any;
+
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent implements OnInit {
-
+  imgCount;
   constructor() { }
 
   ngOnInit() {
+    this.imgCount=135;
   }
   zoom(x){
     //$("#img-"+x).an
@@ -42,24 +44,17 @@ export class WorkComponent implements OnInit {
 
   filter(x){
     //console.log(x)
-
-    if(x==="Baptism"){
+    if(x!=="All"){
       for(var i=1;i<=6;i++){
         var alt=$("#img-"+i).attr("alt").toUpperCase();
-        console.log(alt)
+        //console.log(alt)
         if(!alt.includes(x.toUpperCase())){
           $("#img-"+i).hide();
-          console.log(i)
+          //console.log(i)
         }
-      }
-    }
-    else if(x==="Wedding"){
-      for(var i=1;i<=6;i++){
-        var alt=$("#img-"+i).attr("alt").toUpperCase();
-        console.log(alt)
-        if(!alt.includes(x.toUpperCase())){
-          $("#img-"+i).hide();
-          console.log(i)
+        if(alt.includes(x.toUpperCase())){
+          $("#img-"+i).show();
+          //console.log(i)
         }
       }
     }
@@ -68,6 +63,22 @@ export class WorkComponent implements OnInit {
           $("#img-"+i).show();
         }
       }
+
+  }
+  changeImages(){
+    console.log(this.imgCount)
+    if(this.imgCount<=135){
+      console.log(this.imgCount)
+      for(var i=1;i<=6;i++){
+        console.log(this.imgCount+".jpg")
+        $("#img-src-"+i).hide();
+        $("#img-src-"+i).attr("src", "../../assets/images/gallery/"+this.imgCount+".jpg");
+        $("#img-src-"+i).show();
+
+        this.imgCount=this.imgCount-1;
+      }
+
+    }
 
   }
 }
