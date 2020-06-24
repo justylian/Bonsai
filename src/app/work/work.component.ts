@@ -13,6 +13,7 @@ declare var jQuery: any;
 export class WorkComponent implements OnInit {
   imagesjson=imagesjson;
   imgCount;
+  zoomed=false;
   state="All";
   tag =new Array<String>();
   url=new Array<String>();
@@ -31,7 +32,14 @@ export class WorkComponent implements OnInit {
 
   zoom(x){
     //$("#img-"+x).an
-    $("#img-"+x).attr("class","img-grid");
+    if(this.zoomed){
+      $("#img-"+x).removeClass("img-grid");
+      this.zoomed=false;
+    }
+    else{
+      $("#img-"+x).attr("class","img-grid");
+      this.zoomed=true;
+    }
 /*
     $("#img-"+x).animate({
       transform: "scale(3)",
@@ -43,7 +51,6 @@ export class WorkComponent implements OnInit {
 
   }
   unzoom(x){
-    $("#img-"+x).removeClass("img-grid");
   }
 
   filter(x){
@@ -53,7 +60,7 @@ export class WorkComponent implements OnInit {
       for(var i=1;i<=6;i++){
 
         var alt=this.tag[i].toUpperCase();
-        //console.log(alt)
+        console.log(alt)
         if(!alt.includes(x.toUpperCase())){
           $("#img-"+i).hide();
           //console.log(i)
@@ -93,7 +100,7 @@ export class WorkComponent implements OnInit {
 
           this.tag[i]=this.imagesjson[this.imgCount].tag;
           this.url[i]=this.imagesjson[this.imgCount].url;
-          $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+          $("#img-src-"+i).attr("src", this.url[i]);
 
           //this.imgCount--;
           if(this.imgCount<=0){
@@ -113,7 +120,7 @@ export class WorkComponent implements OnInit {
 
           this.tag[i]=this.imagesjson[this.imgCount].tag;
           this.url[i]=this.imagesjson[this.imgCount].url;
-          $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+          $("#img-src-"+i).attr("src", this.url[i]);
 
           console.log(this.imgCount);
           //this.imgCount--;
@@ -137,7 +144,7 @@ export class WorkComponent implements OnInit {
 
               this.tag[i]=this.imagesjson[this.imgCount].tag;
               this.url[i]=this.imagesjson[this.imgCount].url;
-              $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+              $("#img-src-"+i).attr("src", this.url[i]);
               $("#img-src-"+i).show();
               break;
             }
