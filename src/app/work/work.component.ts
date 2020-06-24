@@ -13,10 +13,11 @@ declare var jQuery: any;
 export class WorkComponent implements OnInit {
   imagesjson=imagesjson;
   imgCount;
+  state="All";
   constructor() { }
 
   ngOnInit() {
-    this.imgCount=135;
+    this.imgCount=this.imagesjson.length;
   }
 
   zoom(x){
@@ -38,6 +39,7 @@ export class WorkComponent implements OnInit {
 
   filter(x){
     //console.log(x)
+    this.state=x;
     if(x!=="All"){
       for(var i=1;i<=6;i++){
         var alt=$("#img-"+i).attr("alt").toUpperCase();
@@ -60,16 +62,41 @@ export class WorkComponent implements OnInit {
 
   }
   changeImages(){
-    console.log(this.imgCount)
-    if(this.imgCount<=135){
+    var imgArray=this.imagesjson.length;
+    console.log(imgArray)
+    if(this.imgCount<=imgArray){
       console.log(this.imgCount)
       for(var i=1;i<=6;i++){
-        console.log(this.imgCount+".jpg")
+        console.log(this.imagesjson[--this.imgCount].url)
         $("#img-src-"+i).hide();
-        $("#img-src-"+i).attr("src", "../../assets/images/gallery/"+this.imgCount+".jpg");
-        $("#img-src-"+i).show();
+        if(this.state==="All"){
+          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
+          $("#img-src-"+i).show();
 
-        this.imgCount=this.imgCount-1;
+        }
+        else if(!this.imagesjson[--this.imgCount].tag.includes(this.state.toUpperCase())){
+          console.log( this.imagesjson[--this.imgCount].tag)
+          console.log(this.state.toUpperCase());
+          while(!this.imagesjson[--this.imgCount].tag.includes(this.state.toUpperCase())){
+            this.imgCount=this.imgCount--;
+            if(this.imgCount===0){
+              this.imgCount=imgArray;
+            }
+          }
+          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
+          $("#img-src-"+i).show();
+
+        }
+        else{
+          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
+          $("#img-src-"+i).show();
+        }
+
+
+        this.imgCount=this.imgCount--;
+        if(this.imgCount===0){
+          this.imgCount=imgArray;
+        }
       }
 
     }
