@@ -14,10 +14,19 @@ export class WorkComponent implements OnInit {
   imagesjson=imagesjson;
   imgCount;
   state="All";
+  tag =new Array<String>();
+  url=new Array<String>();
+
   constructor() { }
 
   ngOnInit() {
     this.imgCount=this.imagesjson.length;
+    for(var j=0;j<6;j++){
+      this.tag[j+1]=this.imagesjson[j].tag;
+      this.url[j+1]=this.imagesjson[j].url;
+
+    }
+
   }
 
   zoom(x){
@@ -42,7 +51,8 @@ export class WorkComponent implements OnInit {
     this.state=x;
     if(x!=="All"){
       for(var i=1;i<=6;i++){
-        var alt=$("#img-"+i).attr("alt").toUpperCase();
+
+        var alt=this.tag[i].toUpperCase();
         //console.log(alt)
         if(!alt.includes(x.toUpperCase())){
           $("#img-"+i).hide();
@@ -61,42 +71,91 @@ export class WorkComponent implements OnInit {
       }
 
   }
+
+
+
+
   changeImages(){
     var imgArray=this.imagesjson.length;
     console.log(imgArray)
     if(this.imgCount<=imgArray){
       console.log(this.imgCount)
       for(var i=1;i<=6;i++){
-        console.log(this.imagesjson[--this.imgCount].url)
-        $("#img-src-"+i).hide();
-        if(this.state==="All"){
-          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
-          $("#img-src-"+i).show();
+        //console.log(this.imagesjson[--this.imgCount].url)
+        //$("#img-src-"+i).hide();
 
+        if(this.state==="All"){
+          console.log("IN ALL");
+          this.imgCount--;
+          if(this.imgCount<=0){
+            this.imgCount=imgArray;
+          }
+
+          this.tag[i]=this.imagesjson[this.imgCount].tag;
+          this.url[i]=this.imagesjson[this.imgCount].url;
+          $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+
+          //this.imgCount--;
+          if(this.imgCount<=0){
+            this.imgCount=imgArray;
+          }
         }
-        else if(!this.imagesjson[--this.imgCount].tag.includes(this.state.toUpperCase())){
-          console.log( this.imagesjson[--this.imgCount].tag)
+        else if(this.imagesjson[this.imgCount-1].tag.toUpperCase().includes(this.state.toUpperCase())){
+
+
           console.log(this.state.toUpperCase());
-          while(!this.imagesjson[--this.imgCount].tag.includes(this.state.toUpperCase())){
-            this.imgCount=this.imgCount--;
-            if(this.imgCount===0){
+          console.log("IN INCLUDES"+i);
+          console.log(this.imgCount);
+          this.imgCount--;
+          if(this.imgCount<=0){
+            this.imgCount=imgArray;
+          }          console.log(this.imgCount);
+
+          this.tag[i]=this.imagesjson[this.imgCount].tag;
+          this.url[i]=this.imagesjson[this.imgCount].url;
+          $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+
+          console.log(this.imgCount);
+          //this.imgCount--;
+          if(this.imgCount<=0){
+            this.imgCount=imgArray;
+          }
+        }
+        else{
+          while(true){
+            console.log("DO NOT INCLUD")
+            if(this.imagesjson[--this.imgCount].tag.toUpperCase().includes(this.state.toUpperCase())){
+              console.log("BREAK ICLUDE")
+              //this.imgCount--;
+              if(this.imgCount<=0){
+                this.imgCount=imgArray;
+                break;
+              }
+
+              console.log( this.imagesjson[this.imgCount].tag)
+              console.log(this.state.toUpperCase());
+
+              this.tag[i]=this.imagesjson[this.imgCount].tag;
+              this.url[i]=this.imagesjson[this.imgCount].url;
+              $("#img-src-"+i).attr("src", this.imagesjson[this.imgCount].url);
+              $("#img-src-"+i).show();
+              break;
+            }
+            //this.imgCount--;
+            if(this.imgCount<=0){
               this.imgCount=imgArray;
             }
           }
-          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
-          $("#img-src-"+i).show();
-
-        }
-        else{
-          $("#img-src-"+i).attr("src", this.imagesjson[--this.imgCount].url);
-          $("#img-src-"+i).show();
-        }
 
 
-        this.imgCount=this.imgCount--;
-        if(this.imgCount===0){
-          this.imgCount=imgArray;
+          this.imgCount--;
+          if(this.imgCount<=0){
+            this.imgCount=imgArray;
+          }
         }
+
+
+
       }
 
     }
