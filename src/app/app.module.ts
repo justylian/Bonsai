@@ -7,7 +7,9 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { MapComponent } from './map/map.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,9 +21,13 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

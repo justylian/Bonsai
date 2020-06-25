@@ -17,17 +17,40 @@ export class WorkComponent implements OnInit {
   state="All";
   tag =new Array<String>();
   url=new Array<String>();
-
-  constructor() { }
+  imagesBasic = [
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg', description: 'Image 1' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg', description: 'Image 2' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg', description: 'Image 3' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg', description: 'Image 4' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg', description: 'Image 5' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg', description: 'Image 6' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg', description: 'Image 7' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg', description: 'Image 8' },
+    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg', thumb:
+    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg', description: 'Image 9' }
+    ];
+  constructor() {}
 
   ngOnInit() {
+    $(function () {
+      $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+
+
+
     this.imgCount=this.imagesjson.length;
     for(var j=0;j<6;j++){
       this.tag[j+1]=this.imagesjson[j].tag;
       this.url[j+1]=this.imagesjson[j].url;
-
     }
-
   }
 
   zoom(x){
@@ -48,10 +71,8 @@ export class WorkComponent implements OnInit {
       position:"absolute",
       zIndex:"4"
     }, 100);*/
+  }
 
-  }
-  unzoom(x){
-  }
 
   filter(x){
     //console.log(x)
@@ -62,11 +83,13 @@ export class WorkComponent implements OnInit {
         var alt=this.tag[i].toUpperCase();
         console.log(alt)
         if(!alt.includes(x.toUpperCase())){
-          $("#img-"+i).hide();
+          //$("#img-"+i).hide();
+          this.changeImages();
           //console.log(i)
         }
         if(alt.includes(x.toUpperCase())){
-          $("#img-"+i).show();
+          //$("#img-"+i).show();
+          this.changeImages();
           //console.log(i)
         }
       }
@@ -76,13 +99,11 @@ export class WorkComponent implements OnInit {
           $("#img-"+i).show();
         }
       }
-
   }
 
 
 
-
-  changeImages(){
+public changeImages(){
     var imgArray=this.imagesjson.length;
     console.log(imgArray)
     if(this.imgCount<=imgArray){
@@ -108,8 +129,6 @@ export class WorkComponent implements OnInit {
           }
         }
         else if(this.imagesjson[this.imgCount-1].tag.toUpperCase().includes(this.state.toUpperCase())){
-
-
           console.log(this.state.toUpperCase());
           console.log("IN INCLUDES"+i);
           console.log(this.imgCount);
@@ -154,7 +173,6 @@ export class WorkComponent implements OnInit {
             }
           }
 
-
           this.imgCount--;
           if(this.imgCount<=0){
             this.imgCount=imgArray;
@@ -168,4 +186,7 @@ export class WorkComponent implements OnInit {
     }
 
   }
+
+
+
 }
