@@ -56,11 +56,21 @@ export class WorkComponent implements OnInit {
   zoom(x){
     //$("#img-"+x).an
     if(this.zoomed){
-      $("#img-"+x).removeClass("img-grid");
+      //$("#img-"+x).removeClass("img-grid");
+      $("#img-prime").attr("src", "../../assets/images/gallery/"+x+".jpg");
+      $("#img-prime").animate({
+        opacity:"1",
+        zIndex:"5"
+      }, 100);
       this.zoomed=false;
     }
     else{
-      $("#img-"+x).attr("class","img-grid");
+      //$("#img-"+x).attr("class","img-grid");
+      $("#img-prime").animate({
+        opacity:"0",
+        zIndex:"1"
+
+      }, 100);
       this.zoomed=true;
     }
 /*
@@ -72,6 +82,7 @@ export class WorkComponent implements OnInit {
       zIndex:"4"
     }, 100);*/
   }
+
 
 
   filter(x){
