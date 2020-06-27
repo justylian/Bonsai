@@ -2,10 +2,20 @@
     background-image: url("../../assets/images/gallery/3.jpg");
     position: absolute;
     background-size: cover;
-    height: 800px;
+    height: 100%;
     width: 100%;
+    top: 0%;
+    left: 100%;
+}
+
+#about-inner {
+    position: absolute;
+    height: 0%;
+    background: white;
+    width: 100%;
+    top: 0%;
+    /* left: 100%; */
     z-index: 3;
-    filter: brightness(30%);
 }
 
 .about-text {
@@ -17,7 +27,7 @@
     padding-top: 200px;
     #about-description {
         font-size: 30px;
-        color: var(--main-color-1);
+        color: var(--main-color-2);
         font-family: "FuturaLight";
     }
 }

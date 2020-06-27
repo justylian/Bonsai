@@ -12,55 +12,127 @@ declare var jQuery: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  isShow: boolean;
-  topPosToStartShowing = 100;
-
-  @HostListener('window:scroll')
-  checkScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    //console.log('[scroll]', scrollPosition);
-
-    if (scrollPosition >= this.topPosToStartShowing) {
-      this.isShow = true;
-    } else {
-      this.isShow = false;
-    }
-  }
-    gotoTop() {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
 
   constructor() {
 
    }
 
   ngOnInit() {
-    document.addEventListener('DOMContentLoaded', () => {
-      const sweetScroll = new SweetScroll({
-        duration: 2000,                 // Specifies animation duration in integer
-        easing: 'easeInQuad'
-       });
-    }, false);
+    let pageState=1;
+    let scrollOn=true;
+    let that=this;
+    $("div").on('wheel', function (e) {
+
+      if (e.originalEvent.deltaY < 0) {
+        if(scrollOn===true){
+          scrollOn=false;
+          console.log("Scroll up");
+          if(pageState===1){
+            pageState=4;
+          }
+          else{
+            pageState--;
+          }
+          that.changePage(pageState);
+          setTimeout(function(){ scrollOn=true; }, 1500);
+        }
 
 
+
+
+      } else {
+        if(scrollOn===true){
+          scrollOn=false;
+          console.log("Scroll down");
+          if(pageState===4){
+            pageState=1;
+          }
+          else{
+            pageState++;
+          }
+          that.changePage(pageState);
+          setTimeout(function(){ scrollOn=true; }, 1500);
+        }
+      }
+    });
+  }
+
+
+
+
+
+
+/*ANIMATIONS*/
+  ngAfterContentInit(){
+    this.moveBonsai();
+    this.moveHeader();
+  }
+
+  public moveBonsai(){
+    $("#main-backgound-image-1").animate({
+      bottom: "0px",
+    }, 1000);
+  }
+  public moveHeader(){
+    $("#main-header h1").animate({
+      top: "320px",
+    }, 1000);
+  }
+
+
+
+
+  /*SCROLL PAGES*/
+
+public changePage(pageState){
+  if(pageState===1){
 
   }
+  else if(pageState===2){
+    $("#main-inner").animate({
+      opacity: "0",
+     }, 100);
+     $("#about").animate({
+      left: "0%",
+     }, 300);
+     $("#about-inner").animate({
+      height: "55%",
+     }, 2000);
+     $("#main-menu-line-1").animate({
+       opacity:"1",
+      height: "500px",
+      background:"white",
+     }, 1000);
+     $("#main-menu-line-2").animate({
+     height: "500px",
+    }, 0);
+    $("#main-menu-line-3").animate({
+      height: "500px",
+     }, 0);
+     $("#main-menu-line-4").animate({
+      height: "500px",
+     }, 0);
+  }
+  else if(pageState===3){
+  }
+  else{
+
+  }
+}
+/*MENU*/
+
   public crossout(i){
-    $("#main-menu-line-"+i).hide();
+    //$("#main-menu-line-"+i).hide();
     $("#main-menu-line-"+i).animate({
-      marginLeft: "-=50",
-    }, 100);
+      opacity: "0",
+     }, 100);
 
   }
   public cross(i){
-    $("#main-menu-line-"+i).show();
+    console.log(i);
+   // $("#main-menu-line-"+i).show();
       $("#main-menu-line-"+i).animate({
-        marginLeft: "+=50",
+       opacity: "1",
       }, 100);
 
   }

@@ -7,7 +7,7 @@
         <ul>
             <a href="#about" data-scroll>
                 <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" id="main-menu-li-1">
-                    The Flower Shop
+                    Our Story
                     <div class="main-menu-line" id="main-menu-line-1"></div>
                 </li>
             </a>
@@ -35,15 +35,16 @@
         </ul>
 
     </div>
-    <div id="main-backgound-image">
-        <div id="main-backgound-image-1"></div>
-        <div id="main-backgound-image-2"></div>
-        <div id="main-backgound-image-3"></div>
-    </div>
-    <div id="main-header">
-        <h1>BONSAI</h1>
-    </div>
+    <div id="main-inner">
+        <div id="main-backgound-image">
+            <div id="main-backgound-image-1" (load)="moveBonsai()"></div>
+            <div id="main-backgound-image-2"></div>
+            <div id="main-backgound-image-3"></div>
+        </div>
+        <div id="main-header">
+            <h1>BONSAI</h1>
+        </div>
 
-
+    </div>
 </div>
-<div id="arrow-up" *ngIf="isShow" (click)="gotoTop()"></div>
+<!--<div id="arrow-up"></div>-->
