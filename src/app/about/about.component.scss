@@ -6,6 +6,7 @@
     width: 100%;
     top: 0%;
     left: 100%;
+    background-position: top;
 }
 
 #about-inner {
@@ -24,9 +25,16 @@
     height: 200px;
     width: 90%;
     padding-left: 5%;
-    padding-top: 200px;
+    padding-top: 39%;
+    h2 {
+        position: absolute;
+    }
     #about-description {
         font-size: 30px;
+        width: 100%;
+        padding-top: 0%;
+        position: absolute;
+        padding-left: 30%;
         color: var(--main-color-2);
         font-family: "FuturaLight";
     }

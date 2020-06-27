@@ -15,10 +15,12 @@ select {
 }
 
 #work {
-    height: 958px;
+    height: 100%;
     overflow-y: hidden;
+    padding-top: 2%;
     width: 100%;
-    margin-top: 900px;
+    position: absolute;
+    top: 100%;
     #work-filter {
         margin-top: -90px;
         float: right;

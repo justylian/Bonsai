@@ -85,6 +85,7 @@ export class MainComponent implements OnInit {
   /*SCROLL PAGES*/
 
 public changePage(pageState){
+  console.log("changingpage");
   if(pageState===1){
 
   }
@@ -94,26 +95,31 @@ public changePage(pageState){
      }, 100);
      $("#about").animate({
       left: "0%",
-     }, 300);
+     // backgroundPosition:"bottom"
+     }, 2000);
      $("#about-inner").animate({
       height: "55%",
+      top:"65%"
      }, 2000);
      $("#main-menu-line-1").animate({
        opacity:"1",
-      height: "500px",
-      background:"white",
      }, 1000);
-     $("#main-menu-line-2").animate({
-     height: "500px",
-    }, 0);
-    $("#main-menu-line-3").animate({
-      height: "500px",
-     }, 0);
-     $("#main-menu-line-4").animate({
-      height: "500px",
-     }, 0);
+
   }
   else if(pageState===3){
+    $("#about").animate({
+      opacity: "0",
+     }, 100);
+     $("#work").animate({
+      top: "0%",
+     // backgroundPosition:"bottom"
+     }, 1000);
+     $("#main-menu-line-1").animate({
+      opacity:"0",
+    }, 1000);
+    $("#main-menu-line-2").animate({
+      opacity:"1",
+    }, 1000);
   }
   else{
 
