@@ -104,9 +104,16 @@ public changePage(pageState){
      $("#main-menu-line-1").animate({
        opacity:"1",
      }, 1000);
+     $("#main-menu-line-2").animate({
+      opacity:"0",
+    }, 1000);
+    $("#main-menu-line-4").animate({
+      opacity:"0",
+    }, 1000);
 
   }
   else if(pageState===3){
+    $("#map").hide();
     $("#about").animate({
       opacity: "0",
      }, 100);
@@ -120,8 +127,38 @@ public changePage(pageState){
     $("#main-menu-line-2").animate({
       opacity:"1",
     }, 1000);
+    $("#main-menu-line-3").animate({
+      opacity:"0",
+    }, 1000);
   }
-  else{
+  else if(pageState===4){
+    $("#work").animate({
+      top: "-100%",
+     // backgroundPosition:"bottom"
+     }, 1000);
+     $("#map").show();
+     $("#main-menu-line-2").animate({
+      opacity:"0",
+    }, 1000);
+    $("#main-menu-line-3").animate({
+      opacity:"1",
+    }, 1000);
+    $("#main-menu-line-4").animate({
+      opacity:"0",
+    }, 1000);
+
+  }
+  else {
+     $("#map").hide();
+     $("#main-menu-line-3").animate({
+      opacity:"0",
+    }, 1000);
+    $("#main-menu-line-4").animate({
+      opacity:"1",
+    }, 1000);
+    $("#main-menu-line-1").animate({
+      opacity:"0",
+    }, 1000);
 
   }
 }
