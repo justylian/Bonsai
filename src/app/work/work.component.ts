@@ -13,30 +13,11 @@ declare var jQuery: any;
 export class WorkComponent implements OnInit {
   imagesjson=imagesjson;
   imgCount;
-  zoomed=false;
+  zoomed=true;
   state="All";
   tag =new Array<String>();
   url=new Array<String>();
-  imagesBasic = [
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg', description: 'Image 1' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg', description: 'Image 2' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg', description: 'Image 3' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg', description: 'Image 4' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg', description: 'Image 5' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg', description: 'Image 6' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg', description: 'Image 7' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg', description: 'Image 8' },
-    { img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg', thumb:
-    'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg', description: 'Image 9' }
-    ];
+
   constructor() {}
 
   ngOnInit() {
@@ -56,21 +37,27 @@ export class WorkComponent implements OnInit {
   zoom(x){
     //$("#img-"+x).an
     if(this.zoomed){
+      console.log("zoom")
       //$("#img-"+x).removeClass("img-grid");
-      $("#img-prime").attr("src", "../../assets/images/gallery/"+x+".jpg");
-      $("#img-prime").animate({
-        opacity:"1",
-        zIndex:"5"
+      var src=$("#img-src-"+x).attr('src');
+      $("#img-slide").attr("src",src);
+      //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
+      $("#carousel").animate({
+        display:"block",
       }, 100);
+      $("#carousel").show();
+
       this.zoomed=false;
     }
     else{
-      //$("#img-"+x).attr("class","img-grid");
-      $("#img-prime").animate({
-        opacity:"0",
-        zIndex:"1"
+      console.log("zoomout")
 
+      //$("#img-"+x).attr("class","img-grid");
+      $("#carousel").animate({
+        display:"none",
       }, 100);
+      $("#carousel").hide();
+
       this.zoomed=true;
     }
 /*
