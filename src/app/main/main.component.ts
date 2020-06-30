@@ -120,7 +120,11 @@ public changePage(pageState){
    }, 1000);
 
    /*MAP*/
-   $("#map").hide();
+   $("#map").animate({
+    top: "100%",
+    opacity:"0"
+  }, 1000);
+
   /*MENU HIGHLIGHT*/
    $("#main-menu-line-1").animate({
     opacity:"0",
@@ -165,8 +169,11 @@ public changePage(pageState){
       top:"65%"
      }, 2000);
 
-    /*MAP*/
-    $("#map").hide();
+     /*MAP*/
+   $("#map").animate({
+    top: "100%",
+    opacity:"0"
+  }, 1000);
 
     /*MENU HIGHLIGHT*/
      $("#main-menu-line-1").animate({
@@ -217,8 +224,11 @@ public changePage(pageState){
      // backgroundPosition:"bottom"
      }, 1000);
 
-    /*MAP*/
-    $("#map").hide();
+     /*MAP*/
+   $("#map").animate({
+    top: "100%",
+    opacity:"0"
+  }, 1000);
 
      /*MENU HIGHLIGHT*/
      $("#main-menu-line-1").animate({
@@ -268,8 +278,11 @@ public changePage(pageState){
      }, 1000);
 
 
-    /*MAP*/
-    $("#map").show();
+     /*MAP*/
+   $("#map").animate({
+    top: "0%",
+    opacity:"1"
+  }, 1000);
 
 
 
@@ -323,7 +336,10 @@ public changePage(pageState){
 
 
     /*MAP*/
-    $("#map").hide();
+    $("#map").animate({
+      top: "100%",
+      opacity:"0"
+    }, 1000);
 
 
 

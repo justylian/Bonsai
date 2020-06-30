@@ -45,6 +45,18 @@
             left: 13%;
             z-index: 1;
         }
+        h5 {
+            color: #14221b;
+            font-family: "Futura";
+            position: absolute;
+            top: 47%;
+            border-top: 3px solid #14221b;
+            border-bottom: 3px solid #14221b;
+            left: 85%;
+            display: inline;
+            font-size: 25px;
+            line-height: 106%;
+        }
         //background-image: url("../../assets/images/background/header.png");
         //background-size: cover;
     }
