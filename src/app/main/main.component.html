@@ -1,33 +1,33 @@
 <div id="main">
 
 
-    <div id="main-logo">
-    </div>
+    <a id="main-logo" (click)="changePage(1)">
+    </a>
     <div id="main-menu">
         <ul>
-            <a href="#about" data-scroll>
-                <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" (click)="changePage(1)" id="main-menu-li-1">
+            <a>
+                <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" (click)="changePage(2)" id="main-menu-li-1">
                     Our Story
                     <div class="main-menu-line" id="main-menu-line-1"></div>
                 </li>
             </a>
-            <a href="#work" data-scroll>
+            <a>
 
-                <li (mouseenter)="cross('2')" (mouseleave)="crossout('2')" (click)="changePage(2)" id="main-menu-li-2">
+                <li (mouseenter)="cross('2')" (mouseleave)="crossout('2')" (click)="changePage(3)" id="main-menu-li-2">
                     Work
                     <div class="main-menu-line" id="main-menu-line-2"></div>
                 </li>
             </a>
-            <a href="#map" data-scroll>
+            <a>
 
-                <li (mouseenter)="cross('3')" (mouseleave)="crossout('3')" (click)="changePage(3)" id="main-menu-li-3">
+                <li (mouseenter)="cross('3')" (mouseleave)="crossout('3')" (click)="changePage(4)" id="main-menu-li-3">
                     Location
                     <div class="main-menu-line" id="main-menu-line-3"></div>
                 </li>
             </a>
-            <a href="#contact" data-scroll>
+            <a>
 
-                <li (mouseenter)="cross('4')" (mouseleave)="crossout('4')" (click)="changePage(4)" id="main-menu-li-4">
+                <li (mouseenter)="cross('4')" (mouseleave)="crossout('4')" (click)="changePage(5)" id="main-menu-li-4">
                     Contact
                     <div class="main-menu-line" id="main-menu-line-4"></div>
                 </li>

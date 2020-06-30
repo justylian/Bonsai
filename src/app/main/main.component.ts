@@ -28,7 +28,7 @@ export class MainComponent implements OnInit {
           scrollOn=false;
           console.log("Scroll up");
           if(pageState===1){
-            pageState=4;
+            pageState=5;
           }
           else{
             pageState--;
@@ -44,7 +44,7 @@ export class MainComponent implements OnInit {
         if(scrollOn===true){
           scrollOn=false;
           console.log("Scroll down");
-          if(pageState===4){
+          if(pageState===5){
             pageState=1;
           }
           else{
@@ -87,20 +87,88 @@ export class MainComponent implements OnInit {
 public changePage(pageState){
   console.log("changingpage");
   if(pageState===1){
+    /*MAIN*/
+    $("#main-inner").animate({
+      opacity: "1",
+     }, 1000);
 
+
+     /*CONTACT*/
+    $("#contact").hide();
+    $("#contact").animate({
+     left:"100%",
+   }, 1000);
+
+   /*ABOUT*/
+   $("#about").animate({
+    left: "100%",
+   // backgroundPosition:"bottom"
+   }, 2000);
+   $("#about").animate({
+    opacity: "1",
+   }, 100);
+   $("#about-inner").animate({
+    height: "0%",
+    top:"0%"
+   }, 2000);
+
+   /*WORK*/
+   $("#work").hide();
+   $("#work").animate({
+    top: "-100%",
+   // backgroundPosition:"bottom"
+   }, 1000);
+
+   /*MAP*/
+   $("#map").hide();
+  /*MENU HIGHLIGHT*/
+   $("#main-menu-line-1").animate({
+    opacity:"0",
+  }, 1000);
+  $("#main-menu-line-2").animate({
+   opacity:"0",
+ }, 1000);
+ $("#main-menu-line-4").animate({
+   opacity:"0",
+ }, 1000);
+ $("#main-menu-line-3").animate({
+  opacity:"0",
+}, 1000);
   }
   else if(pageState===2){
-    $("#main-inner").animate({
-      opacity: "0",
-     }, 100);
+   /*MAIN*/
+   $("#main-inner").animate({
+    opacity: "0",
+   }, 1000);
+
+  /*CONTACT*/
+  $("#contact").hide();
+  $("#contact").animate({
+   left:"100%",
+ }, 1000);
+
+    /*WORK*/
+     $("#work").hide();
+     $("#work").animate({
+      top: "-100%",
+     // backgroundPosition:"bottom"
+     }, 1000);
+
+        /*ABOUT*/
      $("#about").animate({
       left: "0%",
+      opacity:"1"
      // backgroundPosition:"bottom"
      }, 2000);
      $("#about-inner").animate({
       height: "55%",
       top:"65%"
      }, 2000);
+
+    /*MAP*/
+    $("#map").hide();
+
+    /*MENU HIGHLIGHT*/
      $("#main-menu-line-1").animate({
        opacity:"1",
      }, 1000);
@@ -110,17 +178,49 @@ public changePage(pageState){
     $("#main-menu-line-4").animate({
       opacity:"0",
     }, 1000);
+    $("#main-menu-line-3").animate({
+      opacity:"0",
+    }, 1000);
 
   }
   else if(pageState===3){
-    $("#map").hide();
-    $("#about").animate({
+     /*MAIN*/
+     $("#main-inner").animate({
       opacity: "0",
-     }, 100);
+     }, 1000);
+
+       /*CONTACT*/
+    $("#contact").hide();
+    $("#contact").animate({
+     left:"100%",
+   }, 1000);
+
+
+    $("#map").hide();
+       /*ABOUT*/
+   $("#about").animate({
+    left: "100%",
+   // backgroundPosition:"bottom"
+   }, 2000);
+   $("#about").animate({
+    opacity: "1",
+   }, 100);
+   $("#about-inner").animate({
+    height: "0%",
+    top:"0%"
+   }, 2000);
+
+   /*WORK*/
+     $("#work").show();
      $("#work").animate({
       top: "0%",
      // backgroundPosition:"bottom"
      }, 1000);
+
+    /*MAP*/
+    $("#map").hide();
+
+     /*MENU HIGHLIGHT*/
      $("#main-menu-line-1").animate({
       opacity:"0",
     }, 1000);
@@ -130,13 +230,51 @@ public changePage(pageState){
     $("#main-menu-line-3").animate({
       opacity:"0",
     }, 1000);
+    $("#main-menu-line-4").animate({
+      opacity:"0",
+    }, 1000);
   }
   else if(pageState===4){
-    $("#work").animate({
+     /*MAIN*/
+     $("#main-inner").animate({
+      opacity: "0",
+     }, 1000);
+
+    /*CONTACT*/
+    $("#contact").hide();
+    $("#contact").animate({
+    left:"100%",
+  }, 1000);
+
+
+     /*ABOUT*/
+     $("#about").animate({
+      left: "100%",
+     // backgroundPosition:"bottom"
+     }, 2000);
+     $("#about").animate({
+      opacity: "1",
+     }, 100);
+     $("#about-inner").animate({
+      height: "0%",
+      top:"0%"
+     }, 2000);
+
+     /*WORK*/
+     $("#work").hide();
+     $("#work").animate({
       top: "-100%",
      // backgroundPosition:"bottom"
      }, 1000);
-     $("#map").show();
+
+
+    /*MAP*/
+    $("#map").show();
+
+
+
+
+    /*MENU HIGHLIGHT*/
      $("#main-menu-line-2").animate({
       opacity:"0",
     }, 1000);
@@ -146,10 +284,50 @@ public changePage(pageState){
     $("#main-menu-line-4").animate({
       opacity:"0",
     }, 1000);
+    $("#main-menu-line-1").animate({
+      opacity:"0",
+    }, 1000);
 
   }
   else {
-     $("#map").hide();
+    /*MAIN*/
+    $("#main-inner").animate({
+      opacity: "0",
+     }, 1000);
+
+    /*CONTACT*/
+     $("#contact").show();
+     $("#contact").animate({
+      left:"0%",
+    }, 1000);
+
+       /*ABOUT*/
+   $("#about").animate({
+    left: "100%",
+   // backgroundPosition:"bottom"
+   }, 2000);
+   $("#about").animate({
+    opacity: "1",
+   }, 100);
+   $("#about-inner").animate({
+    height: "0%",
+    top:"0%"
+   }, 2000);
+
+   /*WORK*/
+   $("#work").hide();
+   $("#work").animate({
+    top: "-100%",
+   // backgroundPosition:"bottom"
+   }, 1000);
+
+
+    /*MAP*/
+    $("#map").hide();
+
+
+
+    /*MENU HIGHLIGHT*/
      $("#main-menu-line-3").animate({
       opacity:"0",
     }, 1000);
@@ -157,6 +335,9 @@ public changePage(pageState){
       opacity:"1",
     }, 1000);
     $("#main-menu-line-1").animate({
+      opacity:"0",
+    }, 1000);
+    $("#main-menu-line-2").animate({
       opacity:"0",
     }, 1000);
 

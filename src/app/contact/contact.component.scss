@@ -1,28 +1,126 @@
-h2 {
-    color: var(--main-color-2);
-    padding-left: 5%;
-}
-
 #contact {
-    background-color: var(--main-color-1);
+    background-color: white;
     width: 100%;
-    height: 500px;
-    #telephone {
-        background-image: url("../../assets/images/background/phone.png");
-        background-size: cover;
-        width: 50px;
-        height: 50px;
+    display: none;
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    padding-left: 5%;
+    left: 100%;
+    border-left: 2px solid white;
+    color: white;
+    font-family: "FuturaLight";
+    h2 {
+        color: var(--main-color-2);
+        padding-left: 5%;
+        color: #2b4036;
+        padding-left: 5%;
+        padding-top: 2%;
+        z-index: 6;
+        font-family: "Futura";
+        left: 0%;
+        position: absolute;
     }
-    #email {
-        background-image: url("../../assets/images/background/mail.png");
-        background-size: cover;
-        width: 50px;
-        height: 50px;
+    input[type=text],
+    select,
+    textarea {
+        color: #000;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: -4px;
+        margin-bottom: 23px;
+        resize: vertical;
+        outline: none;
     }
-    #facebook {
-        background-image: url("../../assets/images/background/facebook.png");
-        background-size: cover;
-        width: 50px;
-        height: 50px;
+    input[type=submit] {
+        color: var(--main-color-3);
+        background-color: #bda9c1;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #77627c;
+        transition: 2s;
+    }
+    label {
+        color: #77627c;
+        font-family: "Futura";
+    }
+    .container {
+        border-radius: 5px;
+        left: 10%;
+        width: 42%;
+        position: absolute;
+        top: 20%;
+        background-color: #fff;
+        padding: 20px;
+    }
+    #contact-inner {
+        background-color: #bdaac0;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 70%;
+        height: 100%;
+        color: white;
+        h3 {
+            color: white;
+            font-size: 1.5vw;
+            margin-left: 61%;
+            margin-top: -23%;
+            text-decoration: none;
+        }
+        #telephone {
+            width: 10%;
+            height: 10%;
+            margin-left: 2%;
+            margin-top: 16%;
+            text-decoration: none;
+            display: block;
+            #telephone-img {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 3vw;
+                height: 6vh;
+                transform: rotate(-140deg);
+            }
+        }
+        #email {
+            width: 10%;
+            height: 10%;
+            margin-left: 2%;
+            margin-top: 1%;
+            text-decoration: none;
+            display: block;
+            #email-img {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 3vw;
+                height: 5vh;
+            }
+        }
+        #facebook {
+            width: 10%;
+            height: 10%;
+            margin-top: 1%;
+            margin-left: 2%;
+            text-decoration: none;
+            display: block;
+            #facebook-img {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 3vw;
+                height: 5vh;
+            }
+        }
     }
 }
