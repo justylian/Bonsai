@@ -22,7 +22,10 @@ export class MainComponent implements OnInit {
     let scrollOn=true;
     let that=this;
     $("div").on('wheel', function (e) {
-
+      var documentScrollLeft = $(document).scrollLeft();
+      if (documentScrollLeft) {
+        console.log('scroll left');
+    }
       if (e.originalEvent.deltaY < 0) {
         if(scrollOn===true){
           scrollOn=false;
