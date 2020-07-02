@@ -123,6 +123,7 @@ select {
         margin-top: 20%;
         margin-left: 94%;
         position: absolute;
+        z-index: 4;
         padding: 25px;
         transform: rotate(45deg);
         -webkit-transform: rotate(-45deg);
@@ -134,6 +135,7 @@ select {
         border-width: 0 18px 18px 0;
         display: inline-block;
         margin-top: 20%;
+        z-index: 4;
         margin-left: 4%;
         position: absolute;
         padding: 25px;
@@ -168,6 +170,7 @@ select {
         height: 100%;
         display: block;
         margin: auto;
+        transition: 0.5s;
     }
     ul {
         list-style-type: none;
@@ -191,6 +194,13 @@ select {
         min-width: 100%;
         object-fit: cover;
         vertical-align: bottom;
+    }
+    img:hover {
+        opacity: 0.8;
+        transition: 0.5s;
+        cursor: pointer;
+        /* color: black; */
+        // transform: scale(1.1);
     }
     // ADVANCED
     // Portrait
