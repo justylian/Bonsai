@@ -1,6 +1,19 @@
 #main {
     color: var(--main-color-1);
     height: 100%;
+    #language {
+        top: 3%;
+        font-size: 25px;
+        position: absolute;
+        right: 3%;
+        z-index: 5;
+        color: var(--main-color-2);
+        border: 2px solid var(--main-color-1);
+        padding: 6px;
+    }
+    #language:hover {
+        border-color: var(--main-color-2);
+    }
     #main-backgound-image {
         #main-backgound-image-1 {
             background-image: url("../../assets/images/background/bonsai.png");

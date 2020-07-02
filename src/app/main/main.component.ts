@@ -1,6 +1,7 @@
 import { Component, OnInit ,HostListener} from '@angular/core';
 import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 import SweetScroll from 'sweet-scroll';
+import { LanguageService } from './../services/language.service';
 
 declare var require: any;
 declare var $: any;
@@ -13,7 +14,7 @@ declare var jQuery: any;
 })
 export class MainComponent implements OnInit {
 
-  constructor() {
+  constructor(private languageService:LanguageService) {
 
    }
 
@@ -22,10 +23,7 @@ export class MainComponent implements OnInit {
     let scrollOn=true;
     let that=this;
     $("div").on('wheel', function (e) {
-      var documentScrollLeft = $(document).scrollLeft();
-      if (documentScrollLeft) {
-        console.log('scroll left');
-    }
+
       if (e.originalEvent.deltaY < 0) {
         if(scrollOn===true){
           scrollOn=false;
@@ -39,10 +37,6 @@ export class MainComponent implements OnInit {
           that.changePage(pageState);
           setTimeout(function(){ scrollOn=true; }, 1500);
         }
-
-
-
-
       } else {
         if(scrollOn===true){
           scrollOn=false;
@@ -59,7 +53,6 @@ export class MainComponent implements OnInit {
       }
     });
   }
-
 
 
 
@@ -82,8 +75,10 @@ export class MainComponent implements OnInit {
     }, 1000);
   }
 
-
-
+  /*LANGUAGE */
+public changeLng(){
+  this.languageService.changeLang();
+}
 
   /*SCROLL PAGES*/
 
@@ -206,7 +201,7 @@ public changePage(pageState){
    }, 1000);
 
 
-    $("#map").hide();
+    //$("#map").hide();
        /*ABOUT*/
    $("#about").animate({
     left: "100%",
@@ -362,7 +357,10 @@ public changePage(pageState){
 
   }
 }
-/*MENU*/
+
+
+
+/*MENU HIGHLIGHT LINES*/
 
   public crossout(i){
     //$("#main-menu-line-"+i).hide();
