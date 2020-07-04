@@ -1,15 +1,12 @@
 <div id="work">
     <h2>OUR WORK</h2>
-    <a id="work-filter">
+    <div id="work-filter">
+        <a id="work-list-1" class="work-list" (click)="filter('All')" value="All">All Ceremonies</a>
+        <a id="work-list-2" class="work-list" (click)="filter('Wedding')" value="Wedding">Wedding</a>
+        <a id="work-list-3" class="work-list" (click)="filter('Baptism')" value="Baptism">Baptism</a>
 
-        <select id="work-filter-list" #t (change)="filter(t.value)">
-          <div id="button-arrow"></div>
-                <option id="work-list-1"  value="All" >All Ceremonies</option>
-                <option id="work-list-2"  value="Wedding">Wedding</option>
-                <option id="work-list-3"  value="Baptism">Baptism</option>
-            </select>
 
-    </a>
+    </div>
     <!--<img id="img-prime" src="../../assets/images/gallery/1.jpg" loading="lazy">-->
     <ul>
         <li id="img-1" (click)="zoom('1')">

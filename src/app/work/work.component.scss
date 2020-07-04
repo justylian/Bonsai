@@ -67,42 +67,47 @@ select {
     position: absolute;
     top: 100%;
     #work-filter {
-        margin-top: -90px;
-        float: right;
-        margin-right: 10%;
         display: inline;
-        #work-filter-list {
-            display: block;
-            display: inline;
-            background: #ffffffc9;
+        position: absolute;
+        /* padding-top: 22%; */
+        /* padding-left: 10%; */
+        width: 100%;
+        top: 14%;
+        left: 39%;
+        z-index: 5;
+        .work-list {
+            //display: block;
+            //display: inline;
+            background: #fffffff5;
             border: 2px solid var(--main-color-1);
-            right: 3%;
+            right: 50%;
             padding: 7px;
-            /* border-radius: 20px; */
-            top: 14%;
+            top: 40%;
+            margin-left: 1%;
             z-index: 5;
             font-family: "FuturaLight";
             font-size: 20px;
-            filter: drop-shadow(0px 0px 30px);
-            position: absolute;
-            select-arrow {
-                display: none;
-            }
-            #work-list-1 {
-                height: 100%;
-                display: block;
-            }
-            #work-list-2 {
-                height: 100%;
-                // display: none;
-            }
-            #work-list-3 {
-                height: 100%;
-                // display: none;
-            }
+            -webkit-filter: drop-shadow(0px 0px 30px);
+            filter: drop-shadow(0px 0px 30px #fff);
+            height: 100px;
         }
-        #work-filter-list:hover {
+        .work-list:hover {
             border: 2px solid var(--main-color-2);
+        }
+        select-arrow {
+            display: none;
+        }
+        #work-list-1 {
+            // height: 100%;
+            //display: block;
+        }
+        #work-list-2 {
+            //  height: 100%;
+            // display: none;
+        }
+        #work-list-3 {
+            // height: 100%;
+            // display: none;
         }
     }
     #button-arrow {
