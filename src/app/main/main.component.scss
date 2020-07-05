@@ -2,7 +2,7 @@
     color: var(--main-color-1);
     height: 100%;
     #language {
-        top: 3%;
+        top: 4%;
         font-size: 25px;
         position: absolute;
         right: 3%;
@@ -10,6 +10,7 @@
         color: var(--main-color-2);
         border: 2px solid var(--main-color-1);
         padding: 6px;
+        border-radius: 4px;
     }
     #language:hover {
         border-color: var(--main-color-2);
@@ -51,21 +52,33 @@
     #main-header {
         h1 {
             font-size: 19vw;
-            font-family: "Futura";
+            font-family: "FuturaBold";
             position: absolute;
             height: 25px;
+            font-weight: 800;
             top: -400px;
-            left: 13%;
+            left: 17%;
+            letter-spacing: -14px;
             z-index: 1;
+        }
+        h4 {
+            color: #14221b;
+            font-family: "FuturaLight";
+            position: absolute;
+            top: 65%;
+            left: 38%;
+            display: inline;
+            width: 36%;
+            font-size: 25px;
         }
         h5 {
             color: #14221b;
             font-family: "Futura";
             position: absolute;
-            top: 47%;
+            top: 48%;
             border-top: 3px solid #14221b;
             border-bottom: 3px solid #14221b;
-            left: 85%;
+            left: 13%;
             display: inline;
             font-size: 25px;
             line-height: 106%;
@@ -89,7 +102,7 @@
         //bottom: 0%;
         font-size: 25px;
         left: 35%;
-        bottom: -2%;
+        bottom: -3%;
         position: absolute;
         //height: 100%;
         text-shadow: 2px 1px 50px #ffffff;

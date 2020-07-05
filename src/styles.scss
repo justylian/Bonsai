@@ -1,20 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
+    font-family: "FuturaExtraLight";
+    src: url("/assets/font/MPlus/MPLUSRounded1c-Light.ttf");
+    font-weight: light;
+}
+
+@font-face {
     font-family: "FuturaLight";
-    src: url("/assets/font/Futura/futuralight.ttf");
+    src: url("/assets/font/MPlus/MPLUSRounded1c-Light.ttf");
     font-weight: light;
 }
 
 @font-face {
     font-family: "Futura";
-    src: url("/assets/font/Futura/futuramedium.ttf");
+    src: url("/assets/font/MPlus/MPLUSRounded1c-Medium.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "FuturaBold";
-    src: url("/assets/font/Futura/futurabold.ttf");
+    src: url("/assets/font/MPlus/MPLUSRounded1c-Bold.ttf");
     font-weight: bold;
 }
 

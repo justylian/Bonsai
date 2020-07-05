@@ -119,6 +119,7 @@ public changeImages(){
 
           this.tag[i]=this.imagesjson[this.imgCount].tag;
           this.url[i]=this.imagesjson[this.imgCount].url;
+
           $("#img-src-"+i).attr("src", this.url[i]);
 
           //this.imgCount--;
@@ -137,7 +138,9 @@ public changeImages(){
 
           this.tag[i]=this.imagesjson[this.imgCount].tag;
           this.url[i]=this.imagesjson[this.imgCount].url;
+
           $("#img-src-"+i).attr("src", this.url[i]);
+
 
           console.log(this.imgCount);
           //this.imgCount--;
@@ -161,8 +164,10 @@ public changeImages(){
 
               this.tag[i]=this.imagesjson[this.imgCount].tag;
               this.url[i]=this.imagesjson[this.imgCount].url;
+
               $("#img-src-"+i).attr("src", this.url[i]);
               $("#img-src-"+i).show();
+
               break;
             }
             //this.imgCount--;
@@ -178,8 +183,8 @@ public changeImages(){
         }
 
 
-
       }
+
 
     }
 
