@@ -24,6 +24,11 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "FuturaReal";
+    src: url("/assets/font/Futura/futuramedium.ttf");
+}
+
 html,
 body {
     font-family: Futura;
@@ -47,4 +52,6 @@ body {
 h2 {
     font-size: 70px;
     color: var(--main-color-1);
+    font-weight: 800;
+    font-family: "FuturaReal";
 }
