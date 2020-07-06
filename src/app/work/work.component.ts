@@ -66,7 +66,7 @@ export class WorkComponent implements OnInit {
 
   }
   prev(){
-    if(this.currentSlide===1){
+    if(this.currentSlide==="1" || this.currentSlide===1){
       this.currentSlide=6;
 
     }
@@ -84,7 +84,9 @@ export class WorkComponent implements OnInit {
   }
   next(){
     //$("#img-"+x).an
-    if(this.currentSlide===6){
+    console.log(this.currentSlide)
+
+    if(this.currentSlide==="6" || this.currentSlide===6){
       this.currentSlide=1;
     }
     else{
@@ -92,7 +94,7 @@ export class WorkComponent implements OnInit {
     }
 
     var src=$("#img-src-"+this.currentSlide).attr('src');
-    console.log(src)
+    console.log(this.currentSlide)
     $("#img-slide").attr("src",src);
     //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
     $("#carousel").animate({
