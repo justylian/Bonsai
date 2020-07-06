@@ -15,6 +15,7 @@ export class WorkComponent implements OnInit {
   imgCount;
   zoomed=true;
   state="All";
+  currentSlide;
   tag =new Array<String>();
   url=new Array<String>();
 
@@ -36,9 +37,11 @@ export class WorkComponent implements OnInit {
 
   zoom(x){
     //$("#img-"+x).an
+    this.currentSlide=x;
     if(this.zoomed){
       console.log("zoom")
       //$("#img-"+x).removeClass("img-grid");
+
       var src=$("#img-src-"+x).attr('src');
       $("#img-slide").attr("src",src);
       //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
@@ -60,15 +63,46 @@ export class WorkComponent implements OnInit {
 
       this.zoomed=true;
     }
-/*
-    $("#img-"+x).animate({
-      transform: "scale(3)",
-      height:"90vh",
-      marginLeft: "30vw",
-      position:"absolute",
-      zIndex:"4"
-    }, 100);*/
+
   }
+  prev(){
+    if(this.currentSlide===1){
+      this.currentSlide=6;
+
+    }
+    else{
+      this.currentSlide--;
+    }
+    var src=$("#img-src-"+this.currentSlide).attr('src');
+
+    $("#img-slide").attr("src",src);
+    //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
+    $("#carousel").animate({
+      display:"block",
+    }, 100);
+    $("#carousel").show();
+  }
+  next(){
+    //$("#img-"+x).an
+    if(this.currentSlide===6){
+      this.currentSlide=1;
+    }
+    else{
+      this.currentSlide++;
+    }
+
+    var src=$("#img-src-"+this.currentSlide).attr('src');
+    console.log(src)
+    $("#img-slide").attr("src",src);
+    //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
+    $("#carousel").animate({
+      display:"block",
+    }, 100);
+    $("#carousel").show();
+
+
+  }
+
 
 
 
