@@ -72,10 +72,40 @@ export class WorkComponent implements OnInit {
 
 
 
+
   filter(x){
     //console.log(x)
+    if(x==="Baptism"){
+      console.log('ds')
+      $("#work-list-2").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-3").css("border", "2px solid var(--main-color-2)");
+      $("#work-list-3").css("pointer-events", "none");
+
+      $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+
+
+    }
+    else if(x==="Wedding"){
+      $("#work-list-2").css("border", "2px solid var(--main-color-2)");
+      $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-2").css("pointer-events", "none");
+
+      $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+
+
+    }
+    else{
+      $("#work-list-2").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("border", "2px solid var(--main-color-2)");
+      $("#work-list-1").css("pointer-events", "none");
+
+      $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+
+
+    }
     this.state=x;
     if(x!=="All"){
+
       for(var i=1;i<=6;i++){
 
         var alt=this.tag[i].toUpperCase();
