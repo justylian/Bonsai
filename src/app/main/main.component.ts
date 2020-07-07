@@ -124,6 +124,9 @@ public changePage(pageState){
   }, 1000);
 
   /*MENU HIGHLIGHT*/
+  $("#main-menu-line-0").animate({
+    opacity:"1",
+  }, 1000);
    $("#main-menu-line-1").animate({
     opacity:"0",
   }, 1000);
@@ -174,6 +177,9 @@ public changePage(pageState){
   }, 1000);
 
     /*MENU HIGHLIGHT*/
+    $("#main-menu-line-0").animate({
+      opacity:"0",
+    }, 1000);
      $("#main-menu-line-1").animate({
        opacity:"1",
      }, 1000);
@@ -229,6 +235,9 @@ public changePage(pageState){
   }, 1000);
 
      /*MENU HIGHLIGHT*/
+     $("#main-menu-line-0").animate({
+      opacity:"0",
+    }, 1000);
      $("#main-menu-line-1").animate({
       opacity:"0",
     }, 1000);
@@ -286,6 +295,9 @@ public changePage(pageState){
 
 
     /*MENU HIGHLIGHT*/
+    $("#main-menu-line-0").animate({
+      opacity:"0",
+    }, 1000);
      $("#main-menu-line-2").animate({
       opacity:"0",
     }, 1000);
@@ -342,6 +354,9 @@ public changePage(pageState){
 
 
     /*MENU HIGHLIGHT*/
+    $("#main-menu-line-0").animate({
+      opacity:"0",
+    }, 1000);
      $("#main-menu-line-3").animate({
       opacity:"0",
     }, 1000);

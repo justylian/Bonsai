@@ -6,6 +6,12 @@
     <div id="main-menu">
         <ul>
             <a>
+                <li (mouseenter)="cross('0')" (mouseleave)="crossout('0')" (click)="changePage(1)" id="main-menu-li-0">
+                    Home
+                    <div class="main-menu-line" id="main-menu-line-0"></div>
+                </li>
+            </a>
+            <a>
                 <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" (click)="changePage(2)" id="main-menu-li-1">
                     Our Story
                     <div class="main-menu-line" id="main-menu-line-1"></div>

@@ -65,10 +65,10 @@
             color: #14221b;
             font-family: "FuturaLight";
             position: absolute;
-            top: 65%;
-            left: 38%;
+            top: 68%;
+            left: 40%;
             display: inline;
-            width: 36%;
+            width: 38%;
             font-size: 25px;
         }
         h5 {
@@ -124,6 +124,18 @@
         z-index: 3;
         display: block;
         // transition: 0.5s ease;
+        #main-menu-line-0 {
+            //display: none;
+            background: var(--main-color-1);
+            filter: drop-shadow(8px 10px 10px #ffffff);
+            height: 40px;
+            width: 4px;
+            margin-left: 50%;
+            z-index: 3;
+            /* margin-left: -50px; */
+            margin-top: 0px;
+            opacity: 0;
+        }
         #main-menu-line-1 {
             //display: none;
             background: var(--main-color-1);
