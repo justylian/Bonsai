@@ -1,12 +1,9 @@
 #about {
-    background-image: url("../../assets/images/gallery/3.jpg");
-    position: absolute;
-    background-size: cover;
     height: 100%;
     width: 100%;
     top: 0%;
     left: 100%;
-    background-position: top;
+    position: absolute;
 }
 
 #about-inner {
@@ -24,8 +21,9 @@
     position: absolute;
     height: 200px;
     width: 90%;
+    top: 0%;
     padding-left: 5%;
-    padding-top: 39%;
+    padding-top: 2%;
     h2 {
         position: absolute;
         left: 3%;
