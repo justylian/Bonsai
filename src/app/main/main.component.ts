@@ -71,7 +71,7 @@ export class MainComponent implements OnInit {
   }
   public moveHeader(){
     $("#main-header h1").animate({
-      top: "320px",
+      top: "30%",
     }, 1000);
   }
 
