@@ -1,8 +1,8 @@
+import { AnimationsService } from './../services/animations.service';
 import { Component, OnInit ,HostListener} from '@angular/core';
 import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 import SweetScroll from 'sweet-scroll';
 import { LanguageService } from './../services/language.service';
-
 declare var require: any;
 declare var $: any;
 declare var jQuery: any;
@@ -14,7 +14,7 @@ declare var jQuery: any;
 })
 export class MainComponent implements OnInit {
 
-  constructor(private languageService:LanguageService) {
+  constructor(private languageService:LanguageService,private animationsService:AnimationsService) {
 
    }
 
@@ -80,299 +80,10 @@ public changeLng(){
   this.languageService.changeLang();
 }
 
-  /*SCROLL PAGES*/
-
-public changePage(pageState){
-  console.log("changingpage");
-  if(pageState===1){
-    /*MAIN*/
-    $("#main-inner").animate({
-      opacity: "1",
-     }, 1000);
-
-
-     /*CONTACT*/
-    $("#contact").hide();
-    $("#contact").animate({
-     left:"100%",
-   }, 1000);
-
-   /*ABOUT*/
-   $("#about").animate({
-    left: "100%",
-   // backgroundPosition:"bottom"
-   }, 2000);
-   $("#about").animate({
-    opacity: "1",
-   }, 100);
-   $("#about-inner").animate({
-    height: "0%",
-    top:"0%"
-   }, 2000);
-
-   /*WORK*/
-   $("#work").hide();
-   $("#work").animate({
-    top: "-100%",
-   // backgroundPosition:"bottom"
-   }, 1000);
-
-   /*MAP*/
-   $("#map").animate({
-    top: "100%",
-    opacity:"0"
-  }, 1000);
-
-  /*MENU HIGHLIGHT*/
-  $("#main-menu-line-0").animate({
-    opacity:"1",
-  }, 1000);
-   $("#main-menu-line-1").animate({
-    opacity:"0",
-  }, 1000);
-  $("#main-menu-line-2").animate({
-   opacity:"0",
- }, 1000);
- $("#main-menu-line-4").animate({
-   opacity:"0",
- }, 1000);
- $("#main-menu-line-3").animate({
-  opacity:"0",
-}, 1000);
+  /*ANIMATIONS */
+  public changePage(x){
+    this.animationsService.changePage(x);
   }
-  else if(pageState===2){
-   /*MAIN*/
-   $("#main-inner").animate({
-    opacity: "0",
-   }, 1000);
-
-  /*CONTACT*/
-  $("#contact").hide();
-  $("#contact").animate({
-   left:"100%",
- }, 1000);
-
-    /*WORK*/
-     $("#work").hide();
-     $("#work").animate({
-      top: "-100%",
-     // backgroundPosition:"bottom"
-     }, 1000);
-
-        /*ABOUT*/
-     $("#about").animate({
-      left: "0%",
-      opacity:"1"
-     // backgroundPosition:"bottom"
-     }, 2000);
-     $("#about-inner").animate({
-      height: "55%",
-      top:"65%"
-     }, 2000);
-
-     /*MAP*/
-   $("#map").animate({
-    top: "100%",
-    opacity:"0"
-  }, 1000);
-
-    /*MENU HIGHLIGHT*/
-    $("#main-menu-line-0").animate({
-      opacity:"0",
-    }, 1000);
-     $("#main-menu-line-1").animate({
-       opacity:"1",
-     }, 1000);
-     $("#main-menu-line-2").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-4").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-3").animate({
-      opacity:"0",
-    }, 1000);
-
-  }
-  else if(pageState===3){
-     /*MAIN*/
-     $("#main-inner").animate({
-      opacity: "0",
-     }, 1000);
-
-       /*CONTACT*/
-    $("#contact").hide();
-    $("#contact").animate({
-     left:"100%",
-   }, 1000);
-
-
-    //$("#map").hide();
-       /*ABOUT*/
-   $("#about").animate({
-    left: "100%",
-   // backgroundPosition:"bottom"
-   }, 2000);
-   $("#about").animate({
-    opacity: "1",
-   }, 100);
-   $("#about-inner").animate({
-    height: "0%",
-    top:"0%"
-   }, 2000);
-
-   /*WORK*/
-     $("#work").show();
-     $("#work").animate({
-      top: "0%",
-     // backgroundPosition:"bottom"
-     }, 1000);
-
-     /*MAP*/
-   $("#map").animate({
-    top: "100%",
-    opacity:"0"
-  }, 1000);
-
-     /*MENU HIGHLIGHT*/
-     $("#main-menu-line-0").animate({
-      opacity:"0",
-    }, 1000);
-     $("#main-menu-line-1").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-2").animate({
-      opacity:"1",
-    }, 1000);
-    $("#main-menu-line-3").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-4").animate({
-      opacity:"0",
-    }, 1000);
-  }
-  else if(pageState===4){
-     /*MAIN*/
-     $("#main-inner").animate({
-      opacity: "0",
-     }, 1000);
-
-    /*CONTACT*/
-    $("#contact").hide();
-    $("#contact").animate({
-    left:"100%",
-  }, 1000);
-
-
-     /*ABOUT*/
-     $("#about").animate({
-      left: "100%",
-     // backgroundPosition:"bottom"
-     }, 2000);
-     $("#about").animate({
-      opacity: "1",
-     }, 100);
-     $("#about-inner").animate({
-      height: "0%",
-      top:"0%"
-     }, 2000);
-
-     /*WORK*/
-     $("#work").hide();
-     $("#work").animate({
-      top: "-100%",
-     // backgroundPosition:"bottom"
-     }, 1000);
-
-
-     /*MAP*/
-   $("#map").animate({
-    top: "0%",
-    opacity:"1"
-  }, 1000);
-
-
-
-
-    /*MENU HIGHLIGHT*/
-    $("#main-menu-line-0").animate({
-      opacity:"0",
-    }, 1000);
-     $("#main-menu-line-2").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-3").animate({
-      opacity:"1",
-    }, 1000);
-    $("#main-menu-line-4").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-1").animate({
-      opacity:"0",
-    }, 1000);
-
-  }
-  else {
-    /*MAIN*/
-    $("#main-inner").animate({
-      opacity: "0",
-     }, 1000);
-
-    /*CONTACT*/
-     $("#contact").show();
-     $("#contact").animate({
-      left:"0%",
-    }, 1000);
-
-       /*ABOUT*/
-   $("#about").animate({
-    left: "100%",
-   // backgroundPosition:"bottom"
-   }, 2000);
-   $("#about").animate({
-    opacity: "1",
-   }, 100);
-   $("#about-inner").animate({
-    height: "0%",
-    top:"0%"
-   }, 2000);
-
-   /*WORK*/
-   $("#work").hide();
-   $("#work").animate({
-    top: "-100%",
-   // backgroundPosition:"bottom"
-   }, 1000);
-
-
-    /*MAP*/
-    $("#map").animate({
-      top: "100%",
-      opacity:"0"
-    }, 1000);
-
-
-
-    /*MENU HIGHLIGHT*/
-    $("#main-menu-line-0").animate({
-      opacity:"0",
-    }, 1000);
-     $("#main-menu-line-3").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-4").animate({
-      opacity:"1",
-    }, 1000);
-    $("#main-menu-line-1").animate({
-      opacity:"0",
-    }, 1000);
-    $("#main-menu-line-2").animate({
-      opacity:"0",
-    }, 1000);
-
-  }
-}
-
 
 
 /*MENU HIGHLIGHT LINES*/
@@ -392,13 +103,6 @@ public changePage(pageState){
       }, 100);
 
   }
-
-
-
-
-
-
-
 
 
 }

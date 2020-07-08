@@ -83,7 +83,7 @@ export class LanguageService {
       })[0].nodeValue = 'Contact'
       //$('#main-menu-li-1').text('Το Ανθοπωλείο');
       $('#main-menu ul').animate({
-        left: "34%"
+        left: "31%"
       },0);
       $('#main-header h4').text('Bonsai is a local flower shop in Vryses Apokoronou. Since 1992 we continue to provide fresh and creative flower designs!');
       /*MAP*/
