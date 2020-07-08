@@ -32,14 +32,14 @@ public changePage(pageState){
    $("#about").animate({
     left: "100%",
    // backgroundPosition:"bottom"
-   }, 500);
+   }, 200);
    $("#about").animate({
     opacity: "1",
    }, 100);
    $("#about-inner").animate({
     height: "0%",
     top:"0%"
-   }, 500);
+   }, 200);
 
    /*WORK*/
    $("#work").hide();
@@ -95,11 +95,11 @@ public changePage(pageState){
       left: "0%",
       opacity:"1"
      // backgroundPosition:"bottom"
-     }, 2000);
+     }, 1000);
      $("#about-inner").animate({
       height: "55%",
       top:"65%"
-     }, 2000);
+     }, 1000);
 
      /*MAP*/
    $("#map").animate({
@@ -143,14 +143,14 @@ public changePage(pageState){
    $("#about").animate({
     left: "100%",
    // backgroundPosition:"bottom"
-   }, 500);
+   }, 200);
    $("#about").animate({
     opacity: "1",
    }, 100);
    $("#about-inner").animate({
     height: "0%",
     top:"0%"
-   }, 500);
+   }, 200);
 
    /*WORK*/
      $("#work").show();
@@ -199,14 +199,14 @@ public changePage(pageState){
      $("#about").animate({
       left: "100%",
      // backgroundPosition:"bottom"
-     }, 500);
+     }, 200);
      $("#about").animate({
       opacity: "1",
      }, 100);
      $("#about-inner").animate({
       height: "0%",
       top:"0%"
-     }, 500);
+     }, 200);
 
      /*WORK*/
      $("#work").hide();
@@ -259,14 +259,14 @@ public changePage(pageState){
    $("#about").animate({
     left: "100%",
    // backgroundPosition:"bottom"
-   }, 500);
+   }, 200);
    $("#about").animate({
     opacity: "1",
    }, 100);
    $("#about-inner").animate({
     height: "0%",
     top:"0%"
-   }, 500);
+   }, 200);
 
    /*WORK*/
    $("#work").hide();

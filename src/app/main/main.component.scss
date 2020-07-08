@@ -7,12 +7,14 @@
         position: absolute;
         right: 3%;
         z-index: 5;
-        color: var(--main-color-2);
-        border: 2px solid var(--main-color-1);
+        color: #9fbbbd;
+        border: 2px solid #9fbbbd;
+        filter: drop-shadow(0px 0px 30px #000);
         padding: 6px;
         border-radius: 4px;
     }
     #language:hover {
+        color: var(--main-color-2);
         border-color: var(--main-color-2);
     }
     #main-backgound-image {
@@ -34,6 +36,7 @@
             background-image: url("../../assets/images/background/japanese.png");
             position: absolute;
             background-size: cover;
+            opacity: 0.5;
             height: 1000px;
             left: 0%;
             width: 1000px;
@@ -42,9 +45,10 @@
         #main-backgound-image-3 {
             background-image: url("../../assets/images/background/japanese.png");
             position: absolute;
+            opacity: 0.5;
             background-size: cover;
             height: 1000px;
-            left: 50%;
+            left: 51%;
             width: 1000px;
             z-index: 2;
         }
@@ -126,7 +130,7 @@
         // transition: 0.5s ease;
         #main-menu-line-0 {
             //display: none;
-            background: var(--main-color-1);
+            background: #9fbbbd;
             filter: drop-shadow(8px 10px 10px #ffffff);
             height: 40px;
             width: 4px;
@@ -138,7 +142,7 @@
         }
         #main-menu-line-1 {
             //display: none;
-            background: var(--main-color-1);
+            background: #9fbbbd;
             filter: drop-shadow(8px 10px 10px #ffffff);
             height: 40px;
             width: 4px;
@@ -150,7 +154,7 @@
         }
         #main-menu-line-2 {
             //display: none;
-            background: var(--main-color-1);
+            background: #9fbbbd;
             filter: drop-shadow(8px 10px 10px #ffffff);
             height: 40px;
             width: 4px;
@@ -162,7 +166,7 @@
         }
         #main-menu-line-3 {
             //display: none;
-            background: var(--main-color-1);
+            background: #9fbbbd;
             filter: drop-shadow(8px 10px 10px #ffffff);
             height: 40px;
             width: 4px;
@@ -174,7 +178,7 @@
         }
         #main-menu-line-4 {
             //display: none;
-            background: var(--main-color-1);
+            background: #9fbbbd;
             filter: drop-shadow(8px 10px 10px #ffffff);
             height: 40px;
             width: 4px;
