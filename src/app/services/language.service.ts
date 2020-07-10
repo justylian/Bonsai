@@ -61,6 +61,7 @@ export class LanguageService {
     }
     else{
       $('#language').text('EL');
+      $("#body h2").css("font-family", "FuturaBold");
 
 
       /*ΗΟΜΕ PAGE*/

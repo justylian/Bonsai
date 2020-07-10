@@ -19,15 +19,28 @@
             a:hover {
                 color: var(--main-color-1);
             }
+            #header-greek-contact {
+                background-image: url("../../assets/images/letters/EPIKOINONIA.png");
+                position: relative;
+                background-size: cover;
+                /* top: -27%; */
+                top: 1%;
+                text-align: center;
+                height: 2.2vw;
+                margin: auto;
+                float: center;
+                width: 17vw;
+            }
             h2 {
-                color: var(--main-color-2);
-                padding-left: 5%;
-                color: #2b4036;
-                padding-left: 5%;
-                padding-top: 2%;
+                color: var(--main-color-1);
+                //padding-left: 5%;
+                // color: #2b4036;
+                //  padding-left: 5%;
+                //padding-top: 2%;
+                padding-top: 0.4%;
                 z-index: 6;
-                left: 0%;
-                position: absolute;
+                //  left: 0%;
+                //   position: absolute;
             }
             input[type=text],
             select,
