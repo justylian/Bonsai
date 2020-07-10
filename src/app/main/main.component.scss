@@ -3,7 +3,7 @@
     height: 100%;
     #language {
         top: 4%;
-        font-size: 25px;
+        font-size: 1.3vw;
         position: absolute;
         right: 3%;
         z-index: 5;
@@ -57,34 +57,35 @@
         h1 {
             font-size: 19vw;
             font-family: "FuturaReal";
-            position: absolute;
-            height: 25px;
+            /* position: absolute; */
+            /* height: 25px; */
             font-weight: 800;
-            top: -400px;
-            left: 17%;
-            letter-spacing: -14px;
+            padding-top: 35vh;
+            /* left: 17%; */
+            text-align: center;
+            letter-spacing: -1vw;
             z-index: 1;
         }
         h4 {
             color: #14221b;
             font-family: "FuturaLight";
             position: absolute;
-            top: 68%;
+            // top: 68%;
             left: 40%;
             display: inline;
             width: 38%;
-            font-size: 25px;
+            font-size: 1.3vw;
         }
         h5 {
             color: #14221b;
             font-family: "Futura";
             position: absolute;
-            top: 48%;
+            top: 50vh;
             border-top: 3px solid #14221b;
             border-bottom: 3px solid #14221b;
             left: 13%;
             display: inline;
-            font-size: 25px;
+            font-size: 1vw;
             line-height: 106%;
         }
         //background-image: url("../../assets/images/background/header.png");
@@ -102,31 +103,37 @@
         position: fixed;
         filter: drop-shadow(80px 10px 100px var(--main-color-1));
     }
-    #main-menu ul {
-        //bottom: 0%;
-        font-size: 25px;
-        left: 31%;
-        bottom: -3%;
+    #main-menu {
+        bottom: 0%;
+        width: 100%;
+        height: 5%;
         position: absolute;
-        //height: 100%;
+    }
+    #main-menu ul {
+        font-size: 1.3vw;
+        /* left: 29%; */
+        /* display: inline-block; */
+        width: 100%;
+        position: relative;
         text-shadow: 2px 1px 50px #ffffff;
         transition: 0.5s ease;
         z-index: 4;
+        // padding-top: 28vh;
+        text-align: center;
+        -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
         filter: drop-shadow(80px 10px 100px var(--main-color-1));
-        //background: rgba(255, 255, 255, 0.589);
-        // border-radius: 30%;
     }
     #main-menu li {
         font-family: "FuturaLight";
-        font-size: 25px;
         list-style-type: none;
+        margin: auto;
         color: var(--main-color-2);
-        position: relative;
-        padding-right: 81px;
+        //position: relative;
+        padding-right: 3vw;
         text-align: right;
-        float: left;
+        //float: left;
         z-index: 3;
-        display: block;
+        display: inline-block;
         // transition: 0.5s ease;
         #main-menu-line-0 {
             //display: none;

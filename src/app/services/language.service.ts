@@ -30,9 +30,7 @@ export class LanguageService {
         return this.nodeType == 3;
       })[0].nodeValue = 'Επικοινωνία'
       //$('#main-menu-li-1').text('Το Ανθοπωλείο');
-      $('#main-menu ul').animate({
-        left: "24%"
-      },0);
+
       $('#main-header h4').text('To Bonsai είναι ένα ανθοπωλείο στις Βρύσες Αποκορώνου. Από το 1992 που ξεκινήσαμε τη λειτουργία μας συνεχίζουμε να παρέχουμε φρέσκα άνθη, φυτά και ξεχωριστές δημιουργίες για κάθε ιδιαίτερη στιγμή σας!');
 
       /*OUR STORY*/
@@ -82,9 +80,7 @@ export class LanguageService {
         return this.nodeType == 3;
       })[0].nodeValue = 'Contact'
       //$('#main-menu-li-1').text('Το Ανθοπωλείο');
-      $('#main-menu ul').animate({
-        left: "31%"
-      },0);
+
       $('#main-header h4').text('Bonsai is a local flower shop in Vryses Apokoronou. Since 1992 we continue to provide fresh and creative flower designs!');
       /*MAP*/
       $('#work h2').text('CREATIONS');

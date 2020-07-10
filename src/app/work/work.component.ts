@@ -315,25 +315,86 @@ public changeImagesNext(){
       $("#work-list-3").css("border", "2px solid var(--main-color-2)");
       $("#work-list-3").css("pointer-events", "none");
       $("#work-list-2").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "auto");
+      $("#work-list-5").css("pointer-events", "auto");
+      $("#work-list-6").css("pointer-events", "auto");
       $("#work-list-1").css("pointer-events", "auto");
       $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-1)");
     }
     else if(x==="Wedding"){
       $("#work-list-2").css("border", "2px solid var(--main-color-2)");
       $("#work-list-3").css("border", "2px solid var(--main-color-1)");
       $("#work-list-2").css("pointer-events", "none");
       $("#work-list-3").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "auto");
+      $("#work-list-5").css("pointer-events", "auto");
+      $("#work-list-6").css("pointer-events", "auto");
       $("#work-list-1").css("pointer-events", "auto");
       $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-1)");
     }
-    else{
+    else if(x==="All"){
       $("#work-list-2").css("border", "2px solid var(--main-color-1)");
       $("#work-list-1").css("border", "2px solid var(--main-color-2)");
       $("#work-list-1").css("pointer-events", "none");
       $("#work-list-2").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "auto");
+      $("#work-list-5").css("pointer-events", "auto");
+      $("#work-list-6").css("pointer-events", "auto");
       $("#work-list-3").css("pointer-events", "auto");
       $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-1)");
     }
+    else if(x==="Bouquet"){
+      $("#work-list-2").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("pointer-events", "auto");
+      $("#work-list-2").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "none");
+      $("#work-list-5").css("pointer-events", "auto");
+      $("#work-list-6").css("pointer-events", "auto");
+      $("#work-list-3").css("pointer-events", "auto");
+      $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-2)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-1)");
+    }
+    else if(x==="Church"){
+      $("#work-list-2").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("pointer-events", "auto");
+      $("#work-list-2").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "auto");
+      $("#work-list-5").css("pointer-events", "none");
+      $("#work-list-6").css("pointer-events", "auto");
+      $("#work-list-3").css("pointer-events", "auto");
+      $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-2)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-1)");
+    }
+    else if(x==="Memorial"){
+      $("#work-list-2").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-1").css("pointer-events", "auto");
+      $("#work-list-2").css("pointer-events", "auto");
+      $("#work-list-4").css("pointer-events", "auto");
+      $("#work-list-5").css("pointer-events", "auto");
+      $("#work-list-6").css("pointer-events", "none");
+      $("#work-list-3").css("pointer-events", "auto");
+      $("#work-list-3").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-4").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-5").css("border", "2px solid var(--main-color-1)");
+      $("#work-list-6").css("border", "2px solid var(--main-color-2)");
+    }
+
   }
 
 }
