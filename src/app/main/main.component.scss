@@ -75,6 +75,7 @@
             display: inline;
             width: 38%;
             font-size: 1.3vw;
+            margin-top: -2%;
         }
         h5 {
             color: #14221b;
@@ -101,8 +102,8 @@
         #main-logo-img {
             position: absolute;
             background-size: cover;
-            width: 3vw;
-            height: 11vh;
+            width: 2vw;
+            height: 5.5vw;
         }
     }
     #main-menu {
@@ -132,6 +133,7 @@
         color: var(--main-color-2);
         //position: relative;
         padding-right: 3vw;
+        font-weight: 900;
         text-align: right;
         //float: left;
         z-index: 3;

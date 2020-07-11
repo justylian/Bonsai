@@ -98,7 +98,7 @@ public changePage(pageState){
      }, 1000);
      $("#about-inner").animate({
       height: "55%",
-      top:"55%"
+      top:"50%"
      }, 1000);
 
      /*MAP*/

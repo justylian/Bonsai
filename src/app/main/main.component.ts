@@ -96,7 +96,7 @@ public changeLng(){
 
   }
   public cross(i){
-    console.log(i);
+   // console.log(i);
    // $("#main-menu-line-"+i).show();
       $("#main-menu-line-"+i).animate({
        opacity: "1",
