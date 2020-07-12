@@ -1,0 +1,34 @@
+[debug] [2020-07-12T11:46:26.787Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T11:46:26.789Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-07-12T11:46:26.790Z] CLI Version:   8.5.0
+[debug] [2020-07-12T11:46:26.790Z] Platform:      darwin
+[debug] [2020-07-12T11:46:26.790Z] Node Version:  v12.18.1
+[debug] [2020-07-12T11:46:26.791Z] Time:          Sun Jul 12 2020 14:46:26 GMT+0300 (Eastern European Summer Time)
+[debug] [2020-07-12T11:46:26.792Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T11:46:26.792Z] 
+[debug] [2020-07-12T11:46:26.807Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-12T11:46:26.807Z] > authorizing via signed-in user
+[debug] [2020-07-12T11:46:26.808Z] [iam] checking project bonsaiflowershopgr for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-12T11:46:26.811Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/bonsaiflowershopgr:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-07-12T11:46:27.874Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 11:46:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=790","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T11:46:27.875Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/bonsaiflowershopgr  
+ 
+[debug] [2020-07-12T11:46:28.275Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 11:46:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'bonsaiflowershopgr'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-07-12T11:46:28.278Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/bonsaiflowershopgr/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-07-12T11:46:30.538Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 11:46:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[bonsaiflowershopgr]: beginning deploy... 
+[info] i  hosting[bonsaiflowershopgr]: found 57 files in dist 
+[debug] [2020-07-12T11:46:30.564Z] [hosting] hash cache [ZGlzdA] not populated
+[debug] [2020-07-12T11:46:32.409Z] [hosting] hash cache [ZGlzdA] stored for 57 files
+[debug] [2020-07-12T11:46:32.409Z] [hosting][hash queue][FINAL] {"max":1829,"min":84,"avg":377.29824561403507,"active":0,"complete":57,"success":57,"errored":0,"retried":0,"total":57,"elapsed":1845}
+[debug] [2020-07-12T11:46:32.410Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/bonsaiflowershopgr/versions/be7628509e669f7c:populateFiles  
+ <request body omitted>
+[debug] [2020-07-12T11:46:33.988Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 11:46:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T11:46:34.037Z] [hosting][populate queue][FINAL] {"max":1586,"min":1586,"avg":1586,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1629}
+[debug] [2020-07-12T11:46:34.037Z] [hosting] uploads queued: 53
