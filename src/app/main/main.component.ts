@@ -119,18 +119,16 @@ public changeLng(){
       console.log("hm")
       $(".container").addClass("change");
       $("#main-menu-mobile-inner").show();
-      $("#main-menu-mobile-inner").animate({
-        width:"100%"
-      },100);
+
+      $("#main-menu-mobile").show();
       this.first_click=false;
     }
     else if(!this.first_click){
       console.log("hm")
       $(".container").removeClass("change");
       $("#main-menu-mobile-inner").hide();
-      $("#main-menu-mobile-inner").animate({
-        width:"100%"
-      },100);
+
+      $("#main-menu-mobile").hide();
       this.first_click=true;
     }
 

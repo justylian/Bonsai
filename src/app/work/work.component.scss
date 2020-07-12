@@ -156,7 +156,7 @@ select {
     }
     #work-arrow-right {
         border: solid #ffffff;
-        border-width: 0 18px 18px 0;
+        border-width: 0 1vw 1vw 0;
         display: inline-block;
         margin-top: 20%;
         margin-left: 93%;
@@ -170,7 +170,7 @@ select {
     }
     #work-arrow-left {
         border: solid #ffffff;
-        border-width: 0 18px 18px 0;
+        border-width: 0 1vw 1vw 0;
         display: inline-block;
         margin-top: 20%;
         z-index: 4;
@@ -281,5 +281,34 @@ select {
             max-height: 75vh;
             min-width: 0;
         }
+    }
+}
+
+@media screen and (max-width:481px) {
+    #work #work-filter .work-list {
+        font-size: 2.5vw;
+    }
+    #work #header-greek-work {
+        width: 58vw;
+        height: 7.5vw;
+    }
+    h2 {
+        font-size: 11vw;
+    }
+    #work {
+        height: 100%;
+        overflow-y: scroll;
+    }
+    #work #work-filter {
+        position: fixed;
+    }
+    #work #work-arrow-right {
+        margin-top: 50%;
+        padding: 3.5vw;
+        margin-left: 88%;
+    }
+    #work #work-arrow-left {
+        margin-top: 50%;
+        padding: 3.5vw;
     }
 }

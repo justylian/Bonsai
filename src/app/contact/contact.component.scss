@@ -168,3 +168,43 @@
                 }
             }
         }
+
+        @media screen and (max-width:481px) {
+            #contact #header-greek-contact {
+                height: 6.5vw;
+                width: 51vw;
+            }
+            h3 {
+                display: none;
+            }
+            h2 {
+                font-size: 11vw;
+            }
+            #contact #contact-inner {
+                left: 86%;
+            }
+            #contact #contact-inner #telephone {
+                font-size: 9vw;
+                margin-top: 23vh;
+            }
+            #contact #contact-inner #email {
+                font-size: 9vw;
+            }
+            #contact #contact-inner #facebook {
+                font-size: 9vw;
+            }
+            #contact #contact-inner #viber-img {
+                margin-top: 8%;
+                font-size: 9vw;
+                display: block;
+            }
+            #contact #contact-inner #whatsapp-img {
+                margin-top: 8%;
+                font-size: 9vw;
+                display: block;
+            }
+            #contact .container {
+                font-size: 3vw;
+                width: 71%;
+            }
+        }

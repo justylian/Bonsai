@@ -55,3 +55,19 @@
         font-family: "FuturaLight";
     }
 }
+
+@media screen and (max-width:481px) {
+    .about-text #header-greek {
+        height: 8vw;
+        width: 67vw;
+    }
+    h2 {
+        font-size: 12vw;
+    }
+    .about-text {
+        top: -20%;
+    }
+    .about-text #about-description {
+        font-size: 5vw;
+    }
+}

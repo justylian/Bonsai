@@ -279,47 +279,78 @@
                 /* text-align: right; */
                 z-index: 3;
                 display: block;
-                transition: all .2s ease-in-out;
+                transition: 0.1s;
             }
             li:hover {
                 color: var(--main-color-3);
             }
         }
+    }
+
+    .container {
+        top: 1vw;
+        right: 0vw;
+        float: right;
+        width: 8%;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 7;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 3vw;
+        height: 0.5vw;
+        width: 5vw;
+        background-color: var(--main-color-1);
+        margin: 1vh 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-1vw, 0.8vw);
+        transform: rotate(-45deg) translate(-1vw, 0.8vw);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-0.6vw, -0.6vw);
+        transform: rotate(45deg) translate(-0.6vw, -0.6vw);
+    }
+
+    @media screen and (max-width:481px) {
+        #main #main-logo #main-logo-img {
+            width: 6vw;
+            height: 18vw;
+        }
         .container {
-            top: 1vw;
-            right: 0vw;
-            float: right;
-            width: 22%;
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            z-index: 6;
+            width: 16%;
         }
         .bar1,
         .bar2,
         .bar3 {
-            width: 3vw;
-            height: 0.5vw;
-            width: 5vw;
-            background-color: var(--main-color-1);
-            margin: 1vh 0;
-            transition: 0.4s;
+            height: 2vw;
+            width: 9vw;
         }
-        .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-1vw, 0.8vw);
-            transform: rotate(-45deg) translate(-1vw, 0.8vw);
+        #main #main-header h1 {
+            font-size: 27vw;
         }
-        .change .bar2 {
-            opacity: 0;
+        #main #main-header h4 {
+            font-size: 3.3vw;
+            left: 60%;
         }
-        .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-0.6vw, -0.6vw);
-            transform: rotate(45deg) translate(-0.6vw, -0.6vw);
-        }
-    }
-
-    @media (min-width:481px) {
         #main-menu-mobile {
-            display: block;
+            width: 100%
+        }
+        #main-menu-mobile #main-menu-mobile-inner ul {
+            font-size: 10vw;
+        }
+        #main-menu-mobile #language {
+            font-size: 5vw;
         }
     }
