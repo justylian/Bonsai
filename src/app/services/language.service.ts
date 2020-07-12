@@ -41,6 +41,9 @@ export class LanguageService {
       $('#work-list-1').text('Όλα');
       $('#work-list-2').text('Γάμοι');
       $('#work-list-3').text('Βαφτίσεις');
+      $('#work-list-4').text('Μπουκέτα');
+      $('#work-list-5').text('Εικόνες Εκκλησιών');
+      $('#work-list-6').text('Ανθοστήλες');
 
     /*MAP*/
    // $('#map h2').text('ΤΟΠΟΘΕΣΙΑ');
@@ -88,7 +91,9 @@ export class LanguageService {
       $('#work-list-1').text('All Ceremonies');
       $('#work-list-2').text('Weddings');
       $('#work-list-3').text('Baptisms');
-
+      $('#work-list-4').text('Bouquet');
+      $('#work-list-5').text('Church Icons');
+      $('#work-list-6').text('Memorial');
       /*OUR STORY*/
     //  $('.about-text h2').text('OUR STORY');
       $('#about-description').text('Established in 1992 a flower shop first of its kind in the area. We continue to provide for the customer’s needs with fresh and high quality blooms. More than 25 years of experience beautifying your special moments with flower design making events memorable. Let your dream days be realised through the most creative way!');

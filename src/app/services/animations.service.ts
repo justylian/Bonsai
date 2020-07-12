@@ -30,7 +30,7 @@ public changePage(pageState){
 
    /*ABOUT*/
    $("#about").animate({
-    left: "100%",
+    top: "100%",
    // backgroundPosition:"bottom"
    }, 200);
    $("#about").animate({
@@ -40,6 +40,10 @@ public changePage(pageState){
     height: "0%",
     top:"0%"
    }, 200);
+   $("#carousel").animate({
+    opacity:"0"
+   // backgroundPosition:"bottom"
+   }, 200);
 
    /*WORK*/
    $("#work").hide();
@@ -47,6 +51,10 @@ public changePage(pageState){
     top: "-100%",
    // backgroundPosition:"bottom"
    }, 500);
+   $("#work ul").animate({
+    opacity: "0",
+   // backgroundPosition:"bottom"
+   }, 200);
 
    /*MAP*/
    $("#map").animate({
@@ -89,17 +97,25 @@ public changePage(pageState){
       top: "-100%",
      // backgroundPosition:"bottom"
      }, 500);
+     $("#work ul").animate({
+      opacity: "0",
+     // backgroundPosition:"bottom"
+     }, 200);
 
         /*ABOUT*/
      $("#about").animate({
-      left: "0%",
+      top: "0%",
       opacity:"1"
      // backgroundPosition:"bottom"
-     }, 1000);
+     }, 200);
      $("#about-inner").animate({
       height: "55%",
       top:"50%"
-     }, 1000);
+     }, 200);
+     $("#carousel").animate({
+      opacity:"1"
+     // backgroundPosition:"bottom"
+     }, 2000);
 
      /*MAP*/
    $("#map").animate({
@@ -141,7 +157,7 @@ public changePage(pageState){
     //$("#map").hide();
        /*ABOUT*/
    $("#about").animate({
-    left: "100%",
+    top: "100%",
    // backgroundPosition:"bottom"
    }, 200);
    $("#about").animate({
@@ -151,6 +167,10 @@ public changePage(pageState){
     height: "0%",
     top:"0%"
    }, 200);
+   $("#carousel").animate({
+    opacity:"0"
+   // backgroundPosition:"bottom"
+   }, 200);
 
    /*WORK*/
      $("#work").show();
@@ -158,6 +178,10 @@ public changePage(pageState){
       top: "0%",
      // backgroundPosition:"bottom"
      }, 1000);
+     $("#work ul").animate({
+      opacity: "1",
+     // backgroundPosition:"bottom"
+     }, 2000);
 
      /*MAP*/
    $("#map").animate({
@@ -197,7 +221,7 @@ public changePage(pageState){
 
      /*ABOUT*/
      $("#about").animate({
-      left: "100%",
+      top: "100%",
      // backgroundPosition:"bottom"
      }, 200);
      $("#about").animate({
@@ -207,6 +231,10 @@ public changePage(pageState){
       height: "0%",
       top:"0%"
      }, 200);
+     $("#carousel").animate({
+      opacity:"0"
+     // backgroundPosition:"bottom"
+     }, 200);
 
      /*WORK*/
      $("#work").hide();
@@ -214,6 +242,10 @@ public changePage(pageState){
       top: "-100%",
      // backgroundPosition:"bottom"
      }, 500);
+     $("#work ul").animate({
+      opacity: "0",
+     // backgroundPosition:"bottom"
+     }, 200);
 
 
      /*MAP*/
@@ -257,7 +289,7 @@ public changePage(pageState){
 
        /*ABOUT*/
    $("#about").animate({
-    left: "100%",
+    top: "100%",
    // backgroundPosition:"bottom"
    }, 200);
    $("#about").animate({
@@ -267,6 +299,10 @@ public changePage(pageState){
     height: "0%",
     top:"0%"
    }, 200);
+   $("#carousel").animate({
+    opacity:"0"
+   // backgroundPosition:"bottom"
+   }, 200);
 
    /*WORK*/
    $("#work").hide();
@@ -274,6 +310,10 @@ public changePage(pageState){
     top: "-100%",
    // backgroundPosition:"bottom"
    }, 500);
+   $("#work ul").animate({
+    opacity: "0",
+   // backgroundPosition:"bottom"
+   }, 200);
 
 
     /*MAP*/

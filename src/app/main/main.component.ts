@@ -13,12 +13,14 @@ declare var jQuery: any;
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
+  first_click = true;
   constructor(private languageService:LanguageService,private animationsService:AnimationsService) {
 
    }
 
   ngOnInit() {
+
+
     let pageState=1;
     let scrollOn=true;
     let that=this;
@@ -70,9 +72,17 @@ export class MainComponent implements OnInit {
     }, 1000);
   }
   public moveHeader(){
+
     $("#main-header h1").animate({
       paddingTop: "35vh",
     }, 1000);
+  /*  $("#main-logo").animate({
+      top: "1%",
+      left: "1%",
+    }, 3000);*/
+
+
+
   }
 
   /*LANGUAGE */
@@ -103,6 +113,33 @@ public changeLng(){
       }, 100);
 
   }
+
+  menuMobile(){
+    if(this.first_click){
+      console.log("hm")
+      $(".container").addClass("change");
+      $("#main-menu-mobile-inner").show();
+      $("#main-menu-mobile-inner").animate({
+        width:"100%"
+      },100);
+      this.first_click=false;
+    }
+    else if(!this.first_click){
+      console.log("hm")
+      $(".container").removeClass("change");
+      $("#main-menu-mobile-inner").hide();
+      $("#main-menu-mobile-inner").animate({
+        width:"100%"
+      },100);
+      this.first_click=true;
+    }
+
+
+
+
+
+}
+
 
 
 }

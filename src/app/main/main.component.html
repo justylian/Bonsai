@@ -5,10 +5,7 @@
         <img id="main-logo-img" src="../../assets/images/background/logo.png">
     </a>
 
-    <a id="language" (click)="changeLng()">
-        EL
 
-    </a>
     <div id="main-inner">
         <div id="main-backgound-image">
             <div id="main-backgound-image-1" (load)="moveBonsai()"></div>
@@ -18,11 +15,55 @@
         <div id="main-header">
             <h1>BONSAI</h1>
             <h4>Bonsai is a local flower shop in Vryses Apokoronou. Since 1992 we continue to provide fresh and creative flower designs!</h4>
-            <h5>ESTD<br> 1992</h5>
+            <!--    <h5>ESTD<br> 1992</h5>-->
         </div>
 
     </div>
-    <div id="main-menu">
+
+    <div id="main-menu-mobile">
+        <div class="container" (click)="menuMobile()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="main-menu-mobile-inner">
+            <ul>
+                <a>
+                    <li (mouseenter)="cross('0')" (mouseleave)="crossout('0')" (click)="changePage(1);menuMobile();" id="main-menu-li-0">
+                        Home
+                    </li>
+                </a>
+                <a>
+                    <li (mouseenter)="cross('1')" (mouseleave)="crossout('1')" (click)="changePage(2);menuMobile();" id="main-menu-li-1">
+                        Our Story
+                    </li>
+                </a>
+                <a>
+
+                    <li (mouseenter)="cross('2')" (mouseleave)="crossout('2')" (click)="changePage(3);menuMobile();" id="main-menu-li-2">
+                        Creations
+                    </li>
+                </a>
+                <a>
+
+                    <li (mouseenter)="cross('3')" (mouseleave)="crossout('3')" (click)="changePage(4);menuMobile();" id="main-menu-li-3">
+                        Location
+                    </li>
+                </a>
+                <a>
+
+                    <li (mouseenter)="cross('4')" (mouseleave)="crossout('4')" (click)="changePage(5);menuMobile();" id="main-menu-li-4">
+                        Contact
+                    </li>
+                </a>
+            </ul>
+            <a id="language" (click)="changeLng()">
+              EL
+
+          </a>
+        </div>
+    </div>
+    <!--<div id="main-menu">
         <ul>
             <a>
                 <li (mouseenter)="cross('0')" (mouseleave)="crossout('0')" (click)="changePage(1)" id="main-menu-li-0">
@@ -59,6 +100,6 @@
             </a>
         </ul>
 
-    </div>
+    </div>-->
 </div>
 <!--<div id="arrow-up"></div>-->

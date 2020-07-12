@@ -1,9 +1,13 @@
 #about {
     height: 100%;
     width: 100%;
-    top: 0%;
-    left: 100%;
+    top: 100%;
+    left: 0%;
     position: absolute;
+}
+
+#carousel {
+    opacity: 0;
 }
 
 #about-inner {
