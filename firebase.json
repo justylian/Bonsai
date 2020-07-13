@@ -1,14 +1,10 @@
 {
     "hosting": {
-        "public": "dist",
+        "public": "dist/BONSAI-APP",
         "ignore": [
             "firebase.json",
             "**/.*",
             "**/node_modules/**"
-        ],
-        "rewrites": [{
-            "source": "**",
-            "destination": "src/index.html"
-        }]
+        ]
     }
 }
