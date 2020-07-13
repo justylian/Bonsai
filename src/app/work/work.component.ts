@@ -42,10 +42,8 @@ export class WorkComponent implements OnInit {
       var src=$("#img-src-"+x).attr('src');
       $("#img-slide").attr("src",src);
       //$("#img-slide").attr("src", "../../assets/images/gallery/"+x+".jpg");
-      $("#carousel").animate({
-        display:"block",
-      }, 100);
-      $("#carousel").show();
+
+      $(".carousel").show();
 
       this.zoomed=false;
     }
@@ -53,10 +51,8 @@ export class WorkComponent implements OnInit {
       console.log("zoomout")
 
       //$("#img-"+x).attr("class","img-grid");
-      $("#carousel").animate({
-        display:"none",
-      }, 100);
-      $("#carousel").hide();
+
+      $(".carousel").hide();
 
       this.zoomed=true;
     }

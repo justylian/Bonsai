@@ -14,7 +14,7 @@ select {
     appearance: none;
 }
 
-#carousel {
+.carousel {
     display: none;
     top: 0%;
     z-index: 5;
@@ -25,14 +25,14 @@ select {
     background: #000000d9;
     #next-button {
         border: solid #ffffff;
-        border-width: 0 10px 10px 0;
+        border-width: 0 0.5vw 0.5vw 0;
         display: inline-block;
         position: absolute;
-        padding: 25px;
+        padding: 1.5vw;
         transform: rotate(-43deg);
         /* margin-top: 20%; */
         right: 38%;
-        bottom: 3%;
+        bottom: 4vh;
         -webkit-filter: drop-shadow(0px 0px 10px #000);
         filter: drop-shadow(0px 0px 10px #000);
         /* height: 32px; */
@@ -44,15 +44,15 @@ select {
     }
     #previous-button {
         border: solid #ffffff;
-        border-width: 0 10px 10px 0;
+        border-width: 0 0.5vw 0.5vw 0;
         display: inline-block;
         position: absolute;
         -webkit-filter: drop-shadow(0px 0px 10px #000);
         filter: drop-shadow(0px 0px 10px #000);
-        padding: 25px;
+        padding: 1.5vw;
         transform: rotate(135deg);
         left: 38%;
-        bottom: 3%;
+        bottom: 4vh;
         /* width: 25px; */
         /* height: 32px; */
         opacity: 0.6;
@@ -63,11 +63,11 @@ select {
     }
     #exit-button {
         position: absolute;
-        right: 3%;
+        left: 3%;
         top: 4%;
         width: 32px;
-        -webkit-filter: drop-shadow(0px 0px 30px);
-        filter: drop-shadow(0px 0px 30px #fff);
+        -webkit-filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+        filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
         height: 32px;
         opacity: 0.3;
         z-index: 6;
@@ -289,7 +289,7 @@ select {
         font-size: 2.5vw;
     }
     #work #header-greek-work {
-        width: 58vw;
+        width: 59vw;
         height: 7.5vw;
     }
     h2 {
@@ -299,16 +299,26 @@ select {
         height: 100%;
         overflow-y: scroll;
     }
-    #work #work-filter {
-        position: fixed;
-    }
+    #work #work-filter {}
     #work #work-arrow-right {
         margin-top: 50%;
         padding: 3.5vw;
         margin-left: 88%;
+        position: fixed;
     }
     #work #work-arrow-left {
         margin-top: 50%;
         padding: 3.5vw;
+        position: fixed;
+    }
+    .carousel #img-slide {
+        width: 100%;
+        height: auto;
+    }
+    .carousel #next-button {
+        right: 20%;
+    }
+    .carousel #previous-button {
+        left: 20%;
     }
 }

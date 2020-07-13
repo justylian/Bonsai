@@ -28,7 +28,6 @@
     height: 200px;
     width: 100%;
     top: 22%;
-    padding-left: 5%;
     padding-top: 1%;
     #header-greek {
         background-image: url("../../assets/images/letters/ISTORIA.png");
@@ -46,7 +45,8 @@
     }
     #about-description {
         font-size: 1.5vw;
-        width: 90%;
+        padding-left: 5%;
+        width: 95%;
         line-height: 120%;
         padding-top: 0%;
         position: absolute;
@@ -65,7 +65,10 @@
         font-size: 12vw;
     }
     .about-text {
-        top: -20%;
+        top: 40%;
+        padding-top: 27%;
+        top: -58%;
+        background: linear-gradient(0deg, white 63%, rgba(255, 255, 255, 0.7992384454) 76%, rgba(255, 255, 255, 0) 99%);
     }
     .about-text #about-description {
         font-size: 5vw;

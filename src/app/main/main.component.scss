@@ -296,6 +296,7 @@
         display: inline-block;
         cursor: pointer;
         z-index: 7;
+        filter: drop-shadow(0px 0px 20px white);
     }
 
     .bar1,
@@ -349,6 +350,9 @@
         }
         #main-menu-mobile #main-menu-mobile-inner ul {
             font-size: 10vw;
+        }
+        #main-menu-mobile #main-menu-mobile-inner {
+            background: linear-gradient(276deg, white 0%, rgba(255, 255, 255, 0.9729079132) 55%, rgba(255, 255, 255, 0.76) 87%, rgba(255, 255, 255, 0) 100%);
         }
         #main-menu-mobile #language {
             font-size: 5vw;
