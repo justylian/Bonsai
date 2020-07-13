@@ -51,10 +51,9 @@ export class LanguageService {
 
     /*CONTACT*/
     //$('#contact h2').text('ΕΠΙΚΟΙΝΩΝΙΑ');
-    $('#fname-label').text('Όνομα');
-    $('#fname').attr("placeholder", 'Όνομα');
-    $('#lname-label').text('Επώνυμο');
-    $('#lname').attr("placeholder", "Επώνυμο");
+    $('#fname-label').text('Ονοματεπώνυμο');
+    $('#fname').attr("placeholder", 'Ονοματεπώνυμο');
+
     $('#message').text('Μήνυμα');
     $('#subject').attr("placeholder",'Μήνυμα');
     $('#submit').attr("value", "Αποστολή");
@@ -104,10 +103,10 @@ export class LanguageService {
 
     /*CONTACT*/
     //$('#contact h2').text('CONTACT');
-    $('#fname-label').text('First Name');
-    $('#fname').attr("placeholder", 'First Name');
-    $('#lname-label').text('Last Name');
-    $('#lname').attr("placeholder", "Last Name");
+    $('#fname-label').text('Name');
+    $('#fname').attr("placeholder", 'Name');
+    $('#lname-label').text('E-mail');
+    $('#lname').attr("placeholder", "E-mail");
     $('#message').text('Message');
     $('#subject').attr("placeholder",'Message');
     $('#submit').attr("value", "Submit");

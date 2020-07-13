@@ -10,6 +10,16 @@
             border-left: 2px solid white;
             color: white;
             font-family: "FuturaLight";
+            #sent {
+                color: #5f6464;
+                /* width: 10%; */
+                /* height: 10%; */
+                padding-left: 3%;
+                display: inline;
+                position: relative;
+                index: 7;
+                opacity: 0;
+            }
             a {
                 outline: none;
                 color: #FFFFFF;

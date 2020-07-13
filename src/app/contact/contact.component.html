@@ -3,19 +3,25 @@
     <h2>CONTACT</h2>
 
     <div class="container">
-        <form action="mailto:aapostolaki70@gmail.com" method="post" enctype="text/plain">
-            <label id="fname-label">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="First name">
+        <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
 
-            <label id="lname-label" for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Last name">
+            <label id="fname-label">First Name</label>
+            <div class="field">
+                <input type="text" id="fname" formControlName="Fullname" name="Fullname" placeholder="First name">
+            </div>
+            <label id="lname-label" for="lname">E-mail</label>
+            <div class="field">
+                <input type="text" id="lname" name="Email" formControlName="Email" placeholder="E-mail">
+            </div>
 
 
 
             <label id="message" for="subject">Message</label>
-            <textarea id="subject" name="subject" placeholder="Type your request" style="height:200px"></textarea>
-
-            <input id="submit" type="submit" value="Submit">
+            <div class="field">
+                <textarea id="subject" formControlName="Comment" name="Comment" placeholder="Type your request" style="height:200px"></textarea>
+            </div>
+            <input id="submit" type="submit" value="Submit" [disabled]="!FormData.valid">
+            <div id="sent">Message sent.</div>
         </form>
     </div>
     <div id="contact-inner">

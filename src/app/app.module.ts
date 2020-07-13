@@ -1,8 +1,11 @@
+import { ContactService } from './services/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { MapComponent } from './map/map.component';
@@ -23,10 +26,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
