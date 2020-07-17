@@ -12,6 +12,7 @@ export class LanguageService {
   public changeLang(){
     if(this.langState==="en"){
 
+      $('title').text('Bonsai | Ανθοπωλείο');
       $('#language').text('EN');
       /*ΗΟΜΕ PAGE*/
       $("#main-menu-li-0").contents().filter(function(){
@@ -63,6 +64,9 @@ export class LanguageService {
     }
     else{
       $('#language').text('EL');
+
+      $('title').text('Bonsai | Flower Shop');
+
      // $("#body h2").css("font-family", "FuturaBold");
 
 
