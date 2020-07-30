@@ -10,6 +10,12 @@
             border-left: 2px solid white;
             color: white;
             font-family: "FuturaLight";
+            #design {
+                font-size: 1vw;
+                bottom: 1%;
+                position: absolute;
+                margin-left: 2%;
+            }
             #sent {
                 color: #5f6464;
                 /* width: 10%; */
@@ -178,7 +184,7 @@
                 }
             }
         }
-
+        
         @media screen and (max-width:481px) {
             #contact #header-greek-contact {
                 height: 6.5vw;
