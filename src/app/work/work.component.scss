@@ -69,7 +69,7 @@ select {
         -webkit-filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
         filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
         height: 32px;
-        opacity: 0.3;
+        opacity: 0.7;
         z-index: 6;
     }
     #exit-button:hover {
@@ -166,8 +166,8 @@ select {
         padding: 1.5vw;
         transform: rotate(45deg);
         -webkit-transform: rotate(-45deg);
-        -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
-        filter: drop-shadow(0px 0px 30px);
+        -webkit-filter: drop-shadow(0px 0px 10px #000);
+        filter: drop-shadow(0px 0px 10px #000);
     }
     #work-arrow-left {
         border: solid #ffffff;
@@ -180,8 +180,8 @@ select {
         padding: 1.5vw;
         transform: rotate(-222deg);
         -webkit-transform: rotate(-222deg);
-        -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
-        filter: drop-shadow(0px 0px 30px);
+        -webkit-filter: drop-shadow(0px 0px 10px #000);
+        filter: drop-shadow(0px 0px 10px #000);
     }
     #header-greek-work {
         background-image: url("../../assets/images/letters/DIMIOURGIES.png");
@@ -304,12 +304,14 @@ select {
     #work #work-arrow-right {
         margin-top: 50%;
         padding: 3.5vw;
-        margin-left: 88%;
+        border-width: 0 2vw 2vw 0;
+        margin-left: 87%;
         position: fixed;
     }
     #work #work-arrow-left {
         margin-top: 50%;
         padding: 3.5vw;
+        border-width: 0 2vw 2vw 0;
         position: fixed;
     }
     .carousel #img-slide {

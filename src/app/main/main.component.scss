@@ -245,7 +245,7 @@
             background: rgb(255, 255, 255);
             background: linear-gradient(276deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9729079131652661) 55%, rgba(255, 255, 255, 0) 87%, rgba(229, 0, 0, 0) 100%);
             height: 100%;
-            transition: all .2s ease-in-out;
+            transition: 0.2s;
             ul {
                 font-size: 2vw;
                 /* height: 10%; */
@@ -255,7 +255,7 @@
                 display: block;
                 position: absolute;
                 text-shadow: 2px 1px 50px #ffffff;
-                transition: 0.5s ease;
+                //transition: 0.5s ease;
                 z-index: 5;
                 text-align: left;
                 -webkit-filter: drop-shadow(80px 10px 100px var(--main-color-1));
@@ -279,7 +279,7 @@
                 /* text-align: right; */
                 z-index: 3;
                 display: block;
-                transition: 0.1s;
+                transition: 0.2s;
             }
             li:hover {
                 color: var(--main-color-3);
